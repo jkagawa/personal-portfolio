@@ -1,0 +1,194 @@
+* {
+    border: 1px solid red;
+}
+
+.navbar {
+    height: 3rem;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+}
+
+.navbar-toggler {
+    border-color: rgba(255,255,255,.5);
+}
+
+.navbar-toggler:focus, .navbar-toggler:hover {
+    box-shadow: 0 0 0 0.2rem;
+}
+
+.navbar .container {
+    background-color: black;
+}
+
+.brand-logo {
+    height: 60px;
+}
+
+#main {
+    margin-top: 72px;
+}
+
+.profile-image-containter {
+    overflow: hidden;
+    border-radius: 10px;
+    width: 120px;
+    height: 120px;
+}
+
+.profile-image {
+    /* max-width: 50px; */
+    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
+    /* object-fit: none;
+    object-position: 50% 39%; */
+    transform: scale(1.2);
+    transform-origin: 50% 44%;
+}
+}
+
+.profile-header-container, .profile-text-container {
+    /* width: 90%; */
+}
+
+.banner-image {
+    height: 400px;
+    object-fit: cover;
+    object-position: 50% 30%;
+}
+
+.about-banner-image {
+    height: 400px;
+    width: 100vw;
+    object-fit: cover;
+    object-position: 50% 80%;
+}
+
+.sign-in-container {
+    width: 300px;
+    max-width: 85%;
+}
+
+.sign-in-container input:not([type=submit]) {
+    width: 100%;
+    border: 1px solid black;
+}
+
+#toast {
+    display: none;
+    background: gray;
+    transition: opacity 2s ease;
+    height: 40px;
+}
+
+#toast-text {
+    width: 90%;
+}
+
+#toast-button {
+    width: 10%;
+    text-align: right;
+}
+
+#toast-button button {
+    font-size: 1.2rem;
+    background-color: black;
+    color: white;
+    margin: 5px 7px;
+    line-height: 1.0;
+}
+
+.amenity-img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.amenity-img-container {
+    width: 300px;
+}
+
+.amenity-grid {
+    display: grid;
+    grid-template-columns: auto;
+    grid-gap: 3rem;
+}
+
+#sign-out-item {
+    display: none;
+}
+
+.mt-6 {
+    margin-top: 4rem;
+}
+
+.mb-6 {
+    margin-bottom: 4rem;
+}
+
+.w-80 {
+    width: 80%;
+}
+
+.col-lg-8 {
+    flex: 0 1 auto;
+}
+
+.rounded-lg {
+    border-radius: 10px;
+}
+
+.map-embed {
+    border: 0;
+    max-width: 100% !important;
+    max-height: 350px;
+}
+
+a:hover, a:hover .brand-color {
+    color: gray !important;
+}
+
+button:hover, input[type=submit]:hover {
+    color: gray !important;
+}
+
+/* At least medium screen */
+@media only screen and (min-width: 768px) {
+    .profile-header-container, .profile-text-container {
+        width: 80%;
+    }
+    .profile-image-containter {
+        /* width: 120px;
+        height: 120px; */
+    }
+    .profile-image {
+        /* width: 80px; */
+    }
+    .amenity-grid {
+        grid-template-columns: auto auto;
+    }
+}
+
+/* Larger screen */
+@media only screen and (min-width: 992px) {
+    .nav-item {
+        text-align: left;
+    }
+    .banner-image {
+        height: 100vh;
+        object-position: 50% 50%;
+    }
+    .about-banner-image {
+        height: 100vh;
+        object-position: 50% 50%;
+    }
+    .map-embed {
+        border: 0;
+        max-width: 100% !important;
+        max-height: 450px;
+    }
+    .amenity-grid {
+        grid-template-columns: auto auto auto;
+    }
+}
