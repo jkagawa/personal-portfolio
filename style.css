@@ -1,5 +1,5 @@
 * {
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 
 .navbar {
@@ -26,8 +26,12 @@
     height: 60px;
 }
 
-#main {
-    margin-top: 72px;
+#main-section {
+    margin-top: 70px;
+}
+
+#background-section {
+    /* background-color: #0C2D48; */
 }
 
 .profile-image-containter {
@@ -65,12 +69,12 @@
     object-position: 50% 80%;
 }
 
-.sign-in-container {
-    width: 300px;
+.contact-container {
+    width: 400px;
     max-width: 85%;
 }
 
-.sign-in-container input:not([type=submit]) {
+.contact-container input:not([type=submit]), .contact-container textarea {
     width: 100%;
     border: 1px solid black;
 }
@@ -145,12 +149,12 @@
     max-height: 350px;
 }
 
-a:hover, a:hover .brand-color {
-    color: gray !important;
+a:not(.social-links):hover {
+    filter: brightness(80%);
 }
 
-button:hover, input[type=submit]:hover {
-    color: gray !important;
+button:not(.navbar-toggler):hover, input[type=submit]:hover, .social-links:hover {
+    opacity: 0.7;
 }
 
 /* At least medium screen */
