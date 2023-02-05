@@ -1,7 +1,3 @@
-* {
-    /* border: 1px solid red; */
-}
-
 .navbar {
     height: 3rem;
 }
@@ -37,8 +33,8 @@
 .profile-image-containter {
     overflow: hidden;
     border-radius: 10px;
-    width: 120px;
-    height: 120px;
+    /* width: 90px;
+    height: 120px; */
 }
 
 .profile-image {
@@ -47,8 +43,12 @@
     filter: grayscale(100%);
     /* object-fit: none;
     object-position: 50% 39%; */
-    transform: scale(1.2);
-    transform-origin: 50% 44%;
+    /* transform: scale(1.2);
+    transform-origin: 50% 44%; */
+
+    width: 140px;
+    height: 190px;
+    object-fit: cover;
 }
 
 .profile-header-container, .profile-text-container {
@@ -66,6 +66,10 @@
     width: 100vw;
     object-fit: cover;
     object-position: 50% 80%;
+}
+
+.banner-text-container {
+    max-width: 900px;
 }
 
 .contact-container {
@@ -164,6 +168,13 @@ button:not(.navbar-toggler):hover, input[type=submit]:hover, .social-links:hover
 @media only screen and (min-width: 768px) {
     .profile-header-container, .profile-text-container {
         width: 80%;
+    }
+    .background-header, .background-container {
+        width: 768px;
+        margin: 0 auto !important;
+    }
+    .background-box {
+        margin: 0 1.5rem;
     }
     .profile-image-containter {
         /* width: 120px;
