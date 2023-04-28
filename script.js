@@ -1,36 +1,34 @@
+// Get form submit status from local storage
 const message_sent = localStorage.getItem("message_sent");
-const is_contact_form = location.pathname.split('/').pop() == "contact.html";
 
-if(is_contact_form) {
-    const form = document.getElementById("form");
-    form.addEventListener("submit", () => sendMessage());
-}
+// Add event listener to form submit
+const form = document.getElementById("form");
+form.addEventListener("submit", () => sendMessage());
 
+// If form was submitted, show toast message
 if(message_sent === 'true') {
     const toast = document.getElementById("toast");
-    // const toastText = document.getElementById("toast-text");
-    // toastText.textContent = `Thank you, ${username}, your message was sent`;
     toast.style.display = "flex";
     hideToast(toast);
     
-} else {
-    signInItem.style.display = "block";
-    signOutItem.style.display = "none";
-}
+} 
 
+// Set form submit status to true
 function sendMessage() {
     localStorage.setItem("message_sent", true);
-    window.location.href = "index.html";
 }
 
+// Function to hide toast message after 7 seconds
 function hideToast(toast) {
     setTimeout(() => {
         localStorage.setItem("message_sent", false);
         toast.style.opacity = 0;
-    }, 5000);
+    }, 7000);
 }
 
+// Function to close out toast message
 function closeToast() {
     const toast = document.getElementById("toast");
     toast.style.display = "none";
+    localStorage.setItem("message_sent", false);
 }
