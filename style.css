@@ -137,6 +137,10 @@ button:not(.navbar-toggler, .button-style-dark, .button-style-light):hover, inpu
     filter: none !important;
 }
 
+.fs-8 {
+    font-size: 0.8rem;
+}
+
 /* At least medium screen */
 @media only screen and (min-width: 768px) {
     .profile-header-container, .profile-text-container {
