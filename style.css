@@ -83,7 +83,7 @@
 }
 
 .project-container {
-    max-width: 800px;
+    max-width: 1000px;
     margin: auto;
 }
 
@@ -109,6 +109,10 @@ a:not(.social-links, .button-link):hover {
 
 button:not(.navbar-toggler, .button-style-dark, .button-style-light):hover, input[type=submit]:hover, .social-links:hover {
     opacity: 0.7;
+}
+
+.button-link {
+    width: fit-content;
 }
 
 .border-custom-gray {
@@ -139,6 +143,14 @@ button:not(.navbar-toggler, .button-style-dark, .button-style-light):hover, inpu
 
 .fs-8 {
     font-size: 0.8rem;
+}
+
+.project-container .chiclet {
+    display: inline-block;
+    border: 1px solid gray;
+    padding: 5px 8px;
+    margin: 4px 0px;
+    border-radius: 6px;
 }
 
 /* At least medium screen */
