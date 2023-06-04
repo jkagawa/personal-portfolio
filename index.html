@@ -25,26 +25,21 @@
 <body>
 
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg flex-wrap bg-black fixed-top p-0">
+    <nav class="navbar flex-wrap bg-black fixed-top p-0">
         <div class="container mw-100">
             <a href="index.html" class="navbar-brand text-light d-flex align-items-center">
                 <img src="static/images/logo_transparent2.png" alt="Logo" class="brand-logo pt-2 pb-2">
             </a>
-            <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu"><i class="fa-solid fa-bars fs-2"></i></button>
+            <!-- <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu"><i class="fa-solid fa-bars fs-2"></i></button> -->
 
-            <div class="collapse navbar-collapse" id="navmenu">
-                <ul class="navbar-nav ms-auto mb-3 mb-lg-0">
-                    <li class="nav-item text-end">
-                        <a href="#about" class="nav-link text-light fs-5">About</a>
-                    </li>
-                    <li class="nav-item text-end">
-                        <a href="#portfolio" class="nav-link text-light fs-5">Portfolio</a>
-                    </li>
-                    <li class="nav-item text-end">
-                        <a href="#contact" class="nav-link text-light fs-5">Contact</a>
-                    </li>
-                </ul>
-            </div>
+            <ul class="navbar-nav flex-row mb-0 justify-content-center align-items-center">
+                <li>
+                    <a href="#portfolio" class="nav-link text-light fs-5">Portfolio</a>
+                </li>
+                <li>
+                    <a href="#contact" class="nav-link text-light fs-5">Contact</a>
+                </li>
+            </ul>
         </div>
     </nav>
 
@@ -57,7 +52,7 @@
     </div>
 
     <!-- About section -->
-    <section id="about" class="text-black text-left">
+    <section id="about" class="text-black text-left w-100">
         <div class="banner-container d-flex justify-content-center align-items-center m-0 flex-column-reverse flex-lg-row">
                 <div class="d-flex justify-content-center align-items-center flex-column">
                     <div class="banner-text-container pt-4 pb-4 pt-lg-5 pb-lg-5 ms-1 me-1">
@@ -70,7 +65,7 @@
                                 <div class="fs-3 fs-md-2">Web Developer / Software Engineer</div>
                             </div>
                         </div>
-                        <div class="profile-text-container m-3 m-md-auto">I am a skilled full stack developer with a passion for building software. I like to code using JavaScript, Python, React, and Flask. With a drive to stay up-to-date with the latest technological advancements, I aim to design software that drives success.</div>
+                        <div class="profile-text-container m-3 m-md-auto">Welcome to my page! I am an experienced full stack developer with a passion for coding. I like to build using a variety of languages and frameworks such as JavaScript, Python, React, and Flask. With a drive to stay up-to-date with the latest advancements in tech, I am constantly learning and aim to deliver high-quality code.</div>
                     </div>
                 </div>
         </div>
@@ -78,7 +73,7 @@
 
     <!-- Background section -->
     <section id="background-section" class="pb-4 bg-black text-light text-start">
-        <h1 class="background-header text-center p-4">Background</h1>
+        <h1 class="text-center pt-4 pb-4">Background</h1>
         <div class="background-container d-flex flex-column fw-light m-4 mt-0">
             <div class="background-box d-flex flex-column justify-content-start">
                 <div class="text-decoration-underline fs-2">Education</div>
@@ -100,10 +95,10 @@
     </section>
 
     <!-- Portfolio: Seer Weather (Head) -->
-    <section id="portfolio" class="text-black text-left mt-4">
-        <h1 class="p-2 m-0 text-center fw-bold">Portfolio</h1>
-        <div class="project-container pt-4 pb-4">
-            <div class="d-flex justify-content-center align-items-center align-items-md-center flex-row">
+    <section id="portfolio" class="text-left portfolio-section">
+        <h1 class="p-2 m-0 text-center fw-bold pt-4 pb-4">Portfolio</h1>
+        <div class="project-container pt-2 pb-4">
+            <div class="d-flex justify-content-center align-items-center align-items-md-center flex-row-reverse">
                 <div class="col-7 d-flex justify-content-center align-items-left flex-column text-left">
                     <div class="fs-2 fw-light ms-3 me-3">Seer Weather</div>
                     <div class="fs-6 m-3 lh-base">
@@ -118,15 +113,15 @@
                         </div>
                         <div class="mt-2 mt-md-3">A web app that displays weather information based on the location selected. Weather data is pulled from the Open-Meteo API, and includes historical as well as forcast data. It allows users to create and sign into their account to store their saved locations in a database in the cloud. The background image dynamically updates based on the current weather.</div>
                     </div>
-                    <div class="d-flex flex-column ms-3 me-3 g-5">
+                    <div class="d-flex flex-column ms-3 me-3">
                         <a href="https://seer-weather.netlify.app/" target="_blank" class="button-link mb-1">
-                            <button class="button-style-dark fs-5">Website</button>
+                            <button class="button-style-dark fs-6"><i class="fa-regular fa-eye"></i> Website</button>
                         </a>
                         <a href="https://github.com/jkagawa/weather-app-frontend" target="_blank" class="button-link mb-1">
-                            <button class="button-style-dark fs-5">Code (front-end)</button>
+                            <button class="button-style-dark fs-6"><i class="fa-solid fa-code"></i> Code (front-end)</button>
                         </a>
                         <a href="https://github.com/jkagawa/weather-app-backend" target="_blank" class="button-link mb-1">
-                            <button class="button-style-dark fs-5">Code (back-end)</button>
+                            <button class="button-style-dark fs-6"><i class="fa-solid fa-code"></i> Code (back-end)</button>
                         </a>
                     </div>
                 </div>
@@ -140,8 +135,8 @@
     </section>
 
     <!-- Portfolio: Lift Up Gym -->
-    <section class="text-white bg-black text-left">
-        <div class="project-container pt-4 pb-4">
+    <section class="text-left portfolio-section">
+        <div class="project-container pt-2 pb-4">
             <div class="d-flex justify-content-center align-items-center align-items-md-center flex-row-reverse">
                 <div class="col-7 d-flex justify-content-center align-items-left flex-column text-left">
                     <div class="fs-2 fw-light ms-3 me-3">Lift Up Gym</div>
@@ -155,10 +150,10 @@
                     </div>
                     <div class="d-flex flex-column ms-3 me-3">
                         <a href="https://jkagawa.github.io/gym-website/" target="_blank" class="button-link mb-1">
-                            <button class="button-style-light fs-5">Website</button>
+                            <button class="button-style-light fs-6"><i class="fa-regular fa-eye"></i> Website</button>
                         </a>
                         <a href="https://github.com/jkagawa/gym-website" target="_blank" class="button-link mb-1">
-                            <button class="button-style-light fs-5">Code</button>
+                            <button class="button-style-light fs-6"><i class="fa-solid fa-code"></i> Code</button>
                         </a>
                     </div>
                 </div>
@@ -172,9 +167,9 @@
     </section>
 
     <!-- Portfolio: Climbing Spot -->
-    <section class="text-black text-left mt-4">
-        <div class="project-container pt-4 pb-4">
-            <div class="d-flex justify-content-center align-items-center align-items-md-center flex-row">
+    <section class="text-left portfolio-section">
+        <div class="project-container pt-2 pb-4">
+            <div class="d-flex justify-content-center align-items-center align-items-md-center flex-row-reverse">
                 <div class="col-7 d-flex justify-content-center align-items-left flex-column text-left">
                     <div class="fs-2 fw-light ms-3 me-3">Climbing Spot</div>
                     <div class="fs-6 m-3 lh-base">
@@ -188,12 +183,12 @@
                         </div>
                         <div class="mt-2 mt-md-3">A web app for discovering and keeping track of climbing locations. It allows users to add a location and auto-generate a link to search it on Google Maps. Users are also able to sign up and log in through their Google account and unlock features like editing and removing the location or their climber profile.</div>
                     </div>
-                    <div class="d-flex flex-column ms-3 me-3 g-5">
+                    <div class="d-flex flex-column ms-3 me-3">
                         <a href="https://climbingspot.pythonanywhere.com/" target="_blank" class="button-link mb-1">
-                            <button class="button-style-dark fs-5">Website</button>
+                            <button class="button-style-dark fs-6"><i class="fa-regular fa-eye"></i> Website</button>
                         </a>
                         <a href="https://github.com/jkagawa/fsnd-capstone-project" target="_blank" class="button-link mb-1">
-                            <button class="button-style-dark fs-5">Code</button>
+                            <button class="button-style-dark fs-6"><i class="fa-solid fa-code"></i> Code</button>
                         </a>
                     </div>
                 </div>
@@ -207,8 +202,8 @@
     </section>
 
     <!-- Portfolio: Spotify Songs -->
-    <section class="text-white bg-black text-left">
-        <div class="project-container pt-4 pb-4">
+    <section class="text-left portfolio-section">
+        <div class="project-container pt-2 pb-4">
             <div class="d-flex justify-content-center align-items-center align-items-md-center flex-row-reverse">
                 <div class="col-7 d-flex justify-content-center align-items-left flex-column text-left">
                     <div class="fs-2 fw-light ms-3 me-3">Spotify Mix</div>
@@ -219,12 +214,12 @@
                         </div>
                         <div class="mt-2 mt-md-3">A web app displaying a curated list of Spotify songs, playable by clicking on the images.</div>
                     </div>
-                    <div class="d-flex flex-column ms-3 me-3 g-5">
+                    <div class="d-flex flex-column ms-3 me-3">
                         <a href="https://my-spotify-songs.netlify.app/" target="_blank" class="button-link mb-1">
-                            <button class="button-style-light fs-5">Website</button>
+                            <button class="button-style-light fs-6"><i class="fa-regular fa-eye"></i> Website</button>
                         </a>
                         <a href="https://github.com/jkagawa/spotify-songs" target="_blank" class="button-link mb-1">
-                            <button class="button-style-light fs-5">Code</button>
+                            <button class="button-style-light fs-6"><i class="fa-solid fa-code"></i> Code</button>
                         </a>
                     </div>
                 </div>
@@ -238,8 +233,8 @@
     </section>
 
     <!-- Other projects header -->
-    <div>
-        <h1 class="p-2 m-0 text-center fw-bold">Other Projects</h1>
+    <div class="bg-white position-relative">
+        <h1 class="p-2 m-0 text-center fw-bold pt-4 pb-4 border-top">Other Projects</h1>
     </div>
 
     <!-- Accordion -->
@@ -253,10 +248,10 @@
           <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionParent">
             <div class="accordion-body">
                 <!-- Portfolio: Artworks from the Art Institute of Chicago API -->
-                <section class="text-black text-left">
-                    <div class="project-container pt-4 pb-4">
-                        <div class="d-flex justify-content-center align-items-center align-items-md-center flex-row">
-                            <div class="col-6 d-flex justify-content-center align-items-center flex-column text-center">
+                <section class="text-left">
+                    <div class="project-container-small pt-2 pb-4">
+                        <div class="d-flex justify-content-center align-items-center align-items-md-center flex-row-reverse">
+                            <div class="col-7 d-flex justify-content-center align-items-center flex-column text-center">
                                 <div class="fs-6 m-3 lh-1">
                                     <div class="mb-2 mb-md-3">&#x2022; A web app built using <strong>HTML/CSS</strong> and <strong>Boostrap</strong></div>
                                     <div class="mb-2 mb-md-3">&#x2022; Displays images pulled from the <strong>API</strong></div>
@@ -265,11 +260,10 @@
                                     <button class="button-style-dark fs-5">Go to website</button>
                                 </a>
                             </div>
-                            <div class="col-6 d-flex flex-column justify-content-center align-items-center">
+                            <div class="col-5 d-flex flex-column justify-content-center align-items-center">
                                 <div class="p-4">
                                     <img src="static/images/artic-api-demo.png" alt="Quote Generator webpage" class="w-100 rounded-lg shadow-lg">
                                 </div>
-                                <div class="fs-2 fw-light text-center">Artworks from the ARTIC API</div>
                             </div>
                         </div>
                     </div>    
@@ -287,10 +281,10 @@
           <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionParent">
             <div class="accordion-body">
                 <!-- Portfolio: Pong -->
-                <section class="text-white bg-black text-left">
-                    <div class="project-container pt-4 pb-4">
+                <section class="text-left">
+                    <div class="project-container-small pt-2 pb-4">
                         <div class="d-flex justify-content-center align-items-center align-items-md-center flex-row-reverse">
-                            <div class="col-6 d-flex justify-content-center align-items-center flex-column text-center">
+                            <div class="col-7 d-flex justify-content-center align-items-center flex-column text-center">
                                 <div class="fs-6 m-3 lh-1">
                                     <div class="mb-2 mb-md-3">&#x2022; A web app built using <strong>HTML/CSS</strong></div>
                                     <div class="mb-2 mb-md-3">&#x2022; Game physics and logic written in <strong>JavaScript</strong></div>
@@ -299,11 +293,10 @@
                                     <button class="button-style-light fs-5">Go to website</button>
                                 </a>
                             </div>
-                            <div class="col-6 d-flex flex-column justify-content-center align-items-center">
+                            <div class="col-5 d-flex flex-column justify-content-center align-items-center">
                                 <div class="p-4">
                                     <img src="static/images/pong-demo.png" alt="Pong webpage" class="w-100 rounded-lg shadow-lg">
                                 </div>
-                                <div class="fs-2 fw-light text-center">Pong</div>
                             </div>
                         </div>
                     </div>    
@@ -321,10 +314,10 @@
           <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionParent">
             <div class="accordion-body">
                 <!-- Portfolio: Quote Generator -->
-                <section class="text-black text-left">
-                    <div class="project-container pt-4 pb-4">
-                        <div class="d-flex justify-content-center align-items-center align-items-md-center flex-row">
-                            <div class="col-6 d-flex justify-content-center align-items-center flex-column text-center">
+                <section class="text-left">
+                    <div class="project-container-small pt-2 pb-4">
+                        <div class="d-flex justify-content-center align-items-center align-items-md-center flex-row-reverse">
+                            <div class="col-7 d-flex justify-content-center align-items-center flex-column text-center">
                                 <div class="fs-6 m-3 lh-1">
                                     <div class="mb-2 mb-md-3">&#x2022; A web app built using <strong>HTML/CSS</strong> and <strong>JavaScript</strong></div>
                                     <div class="mb-2 mb-md-3">&#x2022; Quotes are pulled from a public <strong>JSON</strong></div>
@@ -333,11 +326,10 @@
                                     <button class="button-style-dark fs-5">Go to website</button>
                                 </a>
                             </div>
-                            <div class="col-6 d-flex flex-column justify-content-center align-items-center">
+                            <div class="col-5 d-flex flex-column justify-content-center align-items-center">
                                 <div class="p-4">
                                     <img src="static/images/quote-generator-demo.png" alt="Quote Generator webpage" class="w-100 rounded-lg shadow-lg">
                                 </div>
-                                <div class="fs-2 fw-light text-center">Quote Generator</div>
                             </div>
                         </div>
                     </div>    
@@ -355,11 +347,11 @@
             <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionParent">
               <div class="accordion-body">
                 <!-- Portfolio: My Budget -->
-                <section class="text-white bg-black text-left">
-                    <div class="project-container pt-4 pb-4">
+                <section class="text-left">
+                    <div class="project-container-small pt-4 pb-4">
                         <div class="d-flex justify-content-center align-items-center align-items-md-center flex-row-reverse">
                             <div class="col-6 d-flex justify-content-center align-items-center flex-column text-center">
-                                <div class="fs-6 m-3 lh-1">
+                                <div class="fs-7 m-3 lh-1">
                                     <div class="mb-2 mb-md-3">&#x2022; An Adroid app written in <strong>Java</strong>, built in Android Studio</div>
                                     <div class="mb-2 mb-md-3">&#x2022; Features Google login integration</div>
                                     <div class="mb-2 mb-md-3">&#x2022; Data is stored in the local device to persist beyond the current session</div>
@@ -368,11 +360,10 @@
                                     <button class="button-style-light fs-5">Go to app page</button>
                                 </a>
                             </div>
-                            <div class="col-6 d-flex flex-column justify-content-center align-items-center">
+                            <div class="col-5 d-flex flex-column justify-content-center align-items-center">
                                 <div class="p-4">
                                     <img src="static/images/budget-app-demo.gif" alt="My Budget app page" class="w-100 rounded-lg shadow-lg">
                                 </div>
-                                <div class="fs-2 fw-light text-center">My Budget</div>
                             </div>
                         </div>
                     </div>    
@@ -384,8 +375,8 @@
     </div>
 
     <!-- Contact section -->
-    <section id="contact" class="text-black text-left mt-4">
-        <h1 class="p-2 m-0 text-center fw-bold">Contact</h1>
+    <section id="contact" class="text-black bg-white text-left">
+        <h1 class="p-2 m-0 text-center fw-bold pt-4 pb-4">Contact</h1>
         <div>
             <div class="d-flex justify-content-center align-items-center flex-column col-sm-12">
                 <div class="contact-container pt-4 pb-5 ms-1 me-1">
@@ -405,7 +396,7 @@
     </section>
 
     <!-- Footer -->
-    <footer>
+    <footer class="bg-white">
         <div class="text-dark text-center p-3 d-flex justify-content-center">
             <a href="https://github.com/jkagawa" class="social-links text-black fs-3 m-2" target="_blank"><i class="fa-brands fa-github"></i></a>
             <a href="https://www.linkedin.com/in/joshuakagawa" class="social-links text-black fs-3 m-2" target="_blank"><i class="fa-brands fa-linkedin"></i></a>

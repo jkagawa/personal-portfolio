@@ -26,6 +26,20 @@
     margin-top: 70px;
 }
 
+#about {
+    position: fixed;
+    top: 0;
+}
+
+#background-section {
+    margin-top: 500px;
+}
+
+#background-section, .portfolio-section, #contact, #accordionParent, footer {
+    z-index: 1;
+    position: relative;
+}
+
 .profile-image-containter {
     overflow: hidden;
     border-radius: 10px;
@@ -87,6 +101,11 @@
     margin: auto;
 }
 
+.project-container-small {
+    max-width: 700px;
+    margin: auto;
+}
+
 .mt-6 {
     margin-top: 4rem;
 }
@@ -145,12 +164,35 @@ button:not(.navbar-toggler, .button-style-dark, .button-style-light):hover, inpu
     font-size: 0.8rem;
 }
 
+.nav-link {
+    padding-right: 0.5rem !important;
+    padding-left: 0.5rem !important;
+}
+
 .project-container .chiclet {
     display: inline-block;
     border: 1px solid gray;
     padding: 5px 8px;
     margin: 4px 0px;
     border-radius: 6px;
+    background-color: gray;
+    color: white;
+}
+
+.portfolio-section:nth-child(odd) {
+    --bs-text-opacity: 1;
+    color: rgba(var(--bs-black-rgb),var(--bs-text-opacity))!important;
+
+    --bs-bg-opacity: 1;
+    background-color: rgba(var(--bs-white-rgb),var(--bs-bg-opacity))!important;
+}
+
+.portfolio-section:nth-child(even), .accordion-collapse {
+    --bs-text-opacity: 1;
+    color: rgba(var(--bs-white-rgb),var(--bs-text-opacity))!important;
+
+    --bs-bg-opacity: 1;
+    background-color: rgba(var(--bs-black-rgb),var(--bs-bg-opacity))!important;
 }
 
 /* At least medium screen */
@@ -164,6 +206,9 @@ button:not(.navbar-toggler, .button-style-dark, .button-style-light):hover, inpu
     }
     .background-box {
         margin: 0 1.5rem;
+    }
+    #background-section {
+        margin-top: 394px;
     }
 }
 
