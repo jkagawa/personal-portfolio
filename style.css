@@ -28,15 +28,25 @@
 
 #about {
     position: fixed;
-    top: 0;
+    top: 15%;
 }
 
 #background-section {
-    margin-top: 500px;
+    margin-top: calc(100vh - 96px);
 }
 
-#background-section, .portfolio-section, #contact, #accordionParent, footer {
+.portfolio-section {
     z-index: 1;
+    position: relative;
+}
+
+#background-section, #portfolio {
+    z-index: 10;
+    position: relative;
+}
+
+.other-project-header, .accordion, #contact, footer {
+    z-index: 20;
     position: relative;
 }
 
@@ -195,6 +205,22 @@ button:not(.navbar-toggler, .button-style-dark, .button-style-light):hover, inpu
     background-color: rgba(var(--bs-black-rgb),var(--bs-bg-opacity))!important;
 }
 
+.sticky {
+    position: fixed;
+    top: 70px;
+    width: 100%;
+    z-index: 10;
+  }
+
+.sticky + .background-container {
+    padding-top: 96px;
+}
+
+.sticky + .project-container {
+    padding-top: 96px;
+}
+
+
 /* At least medium screen */
 @media only screen and (min-width: 768px) {
     .profile-header-container, .profile-text-container {
@@ -206,9 +232,6 @@ button:not(.navbar-toggler, .button-style-dark, .button-style-light):hover, inpu
     }
     .background-box {
         margin: 0 1.5rem;
-    }
-    #background-section {
-        margin-top: 394px;
     }
 }
 

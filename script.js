@@ -32,3 +32,29 @@ function closeToast() {
     toast.style.display = "none";
     localStorage.setItem("message_sent", false);
 }
+
+// Sticky header
+window.onscroll = function() {stickyHeader()};
+
+var backgroundHeader = document.getElementById("background-header");
+var portfolioHeader = document.getElementById("portfolio-header");
+
+
+function stickyHeader() {
+    // var sticky = header.offsetTop;
+    var scrollValue = window.pageYOffset + 70;
+    var stickyBackground = window.innerHeight - 96;
+    var stickyPortfolio = window.innerHeight + 392;
+
+    if (scrollValue > stickyPortfolio) {
+        portfolioHeader.classList.add("sticky");
+        backgroundHeader.classList.remove("sticky");
+    }
+    else if (scrollValue > stickyBackground) {
+        backgroundHeader.classList.add("sticky");
+        portfolioHeader.classList.remove("sticky");
+    } else {
+        backgroundHeader.classList.remove("sticky");
+        portfolioHeader.classList.remove("sticky");
+    }
+}
