@@ -132,8 +132,9 @@
     border-radius: 10px;
 }
 
-a:not(.social-links, .button-link):hover {
+a:not(.social-links, .button-link):hover, .nav-link:hover {
     filter: brightness(80%);
+    cursor: pointer;
 }
 
 button:not(.navbar-toggler, .button-style-dark, .button-style-light):hover, input[type=submit]:hover, .social-links:hover {
@@ -220,6 +221,9 @@ button:not(.navbar-toggler, .button-style-dark, .button-style-light):hover, inpu
     padding-top: 96px;
 }
 
+#UpIcon {
+    display: none;
+}
 
 /* At least medium screen */
 @media only screen and (min-width: 768px) {

@@ -41,7 +41,6 @@ var portfolioHeader = document.getElementById("portfolio-header");
 
 
 function stickyHeader() {
-    // var sticky = header.offsetTop;
     var scrollValue = window.pageYOffset + 70;
     var stickyBackground = window.innerHeight - 96;
     var stickyPortfolio = window.innerHeight + 392;
@@ -58,3 +57,31 @@ function stickyHeader() {
         portfolioHeader.classList.remove("sticky");
     }
 }
+
+// Scroll to top
+function scrollToTop() {
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}
+
+// Scroll to bottom
+function scrollToBottom() {
+    window.scrollTo(0, document.body.scrollHeight);
+}
+
+// Scroll to portfolio section
+function scrollToPortfolio() {
+    window.scrollTo(0, window.innerHeight + 322);
+}
+
+// Up Icon
+const upIcon = document.getElementById('UpIcon');
+
+addEventListener("scroll", () => {
+    if (window.pageYOffset > 0) {
+        upIcon.style.display = 'block';
+    }
+    else {
+        upIcon.style.display = 'none';
+    }
+});

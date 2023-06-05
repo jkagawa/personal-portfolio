@@ -20,7 +20,7 @@
     <script src="https://kit.fontawesome.com/3ef1af0600.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/x-icon" href="static/images/favicon.png">
-    <title>Home | Joshua Kagawa</title>
+    <title>Joshua Kagawa</title>
 </head>
 <body>
 
@@ -33,11 +33,14 @@
             <!-- <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu"><i class="fa-solid fa-bars fs-2"></i></button> -->
 
             <ul class="navbar-nav flex-row mb-0 justify-content-center align-items-center">
-                <li>
-                    <a href="#portfolio" class="nav-link text-light fs-5">Portfolio</a>
+                <li id="UpIcon">
+                    <div onclick="scrollToTop()" class="nav-link text-light fs-2 mt-1"><i class="fa-solid fa-chevron-up"></i></div>
                 </li>
                 <li>
-                    <a href="#contact" class="nav-link text-light fs-5">Contact</a>
+                    <div onclick="scrollToPortfolio()" class="nav-link text-light fs-5">Portfolio</div>
+                </li>
+                <li>
+                    <div onclick="scrollToBottom()" class="nav-link text-light fs-5">Contact</div>
                 </li>
             </ul>
         </div>
