@@ -53,6 +53,7 @@
 .profile-image-containter {
     overflow: hidden;
     border-radius: 10px;
+    display: none;
 }
 
 .profile-image {
@@ -228,7 +229,7 @@ button:not(.navbar-toggler, .button-style-dark, .button-style-light):hover, inpu
 /* At least medium screen */
 @media only screen and (min-width: 768px) {
     .profile-header-container, .profile-text-container {
-        width: 80%;
+        /* width: 80%; */
     }
     .background-header, .background-container {
         width: 768px;
