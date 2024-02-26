@@ -242,6 +242,9 @@ button:not(.navbar-toggler, .button-style-dark, .button-style-light):hover, inpu
     .background-box {
         margin: 0 1.5rem;
     }
+    #about {
+        top: 20%;
+    }
 }
 
 /* Larger screen */
