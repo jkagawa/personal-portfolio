@@ -36,25 +36,26 @@ function closeToast() {
 // Sticky header
 window.onscroll = function() {stickyHeader()};
 
-var backgroundHeader = document.getElementById("background-header");
-var portfolioHeader = document.getElementById("portfolio-header");
+var firstHeader = document.getElementById("portfolio-header");
+// var secondHeader = document.getElementById("background-header");
 
 
 function stickyHeader() {
     var scrollValue = window.pageYOffset + 70;
-    var stickyBackground = window.innerHeight - 96;
-    var stickyPortfolio = window.innerHeight + 392;
+    var stickyFirstHeader = window.innerHeight - 96;
+    // var stickySecondHeader = window.innerHeight + 392;
 
-    if (scrollValue > stickyPortfolio) {
-        portfolioHeader.classList.add("sticky");
-        backgroundHeader.classList.remove("sticky");
+    if (scrollValue > stickyFirstHeader) {
+        firstHeader.classList.add("sticky");
+        // secondHeader.classList.remove("sticky");
     }
-    else if (scrollValue > stickyBackground) {
-        backgroundHeader.classList.add("sticky");
-        portfolioHeader.classList.remove("sticky");
-    } else {
-        backgroundHeader.classList.remove("sticky");
-        portfolioHeader.classList.remove("sticky");
+    // else if (scrollValue > stickySecondHeader) {
+    //     firstHeader.classList.remove("sticky");
+    //     secondHeader.classList.add("sticky");
+    // } 
+    else {
+        firstHeader.classList.remove("sticky");
+        // secondHeader.classList.remove("sticky");
     }
 }
 
@@ -71,7 +72,7 @@ function scrollToBottom() {
 
 // Scroll to portfolio section
 function scrollToPortfolio() {
-    window.scrollTo(0, window.innerHeight + 322);
+    window.scrollTo(0, window.innerHeight - 166);
 }
 
 // Up Icon
