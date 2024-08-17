@@ -73,7 +73,8 @@ function scrollToBottom() {
 
 // Scroll to portfolio section
 function scrollToPortfolio() {
-    window.scrollTo(0, window.innerHeight - 166);
+    // window.scrollTo(0, window.innerHeight - 166);
+    window.scrollTo(0, 430);
 }
 
 // Up Icon
