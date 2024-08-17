@@ -42,7 +42,8 @@ var firstHeader = document.getElementById("portfolio-header");
 
 function stickyHeader() {
     var scrollValue = window.pageYOffset + 70;
-    var stickyFirstHeader = window.innerHeight - 96;
+    // var stickyFirstHeader = window.innerHeight - 96;
+    var stickyFirstHeader = 500;
     // var stickySecondHeader = window.innerHeight + 392;
 
     if (scrollValue > stickyFirstHeader) {
