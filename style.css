@@ -23,7 +23,7 @@
 }
 
 #main-section, #about {
-    margin-top: 70px;
+    margin-top: 0;
 }
 
 #about {
@@ -247,6 +247,9 @@ button:not(.navbar-toggler, .button-style-dark, .button-style-light):hover, inpu
     /* #about {
         top: 20%;
     } */
+    #main-section, #about {
+        margin-top: 70px;
+    }
 }
 
 /* Larger screen */
