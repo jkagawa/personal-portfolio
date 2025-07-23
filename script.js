@@ -74,7 +74,7 @@ function scrollToBottom() {
 // Scroll to portfolio section
 function scrollToPortfolio() {
     // window.scrollTo(0, window.innerHeight - 166);
-    window.scrollTo(0, 464);
+    window.scrollTo(0, 400);
 }
 
 // Up Icon
