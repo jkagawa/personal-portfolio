@@ -252,6 +252,13 @@ button:not(.navbar-toggler, .button-style-dark, .button-style-light):hover, inpu
 	}
 }
 
+/* small screen */
+@media only screen and (max-width: 640px) {
+    .navbar-brand {
+        font-size: 1.25rem;
+    }
+}
+
 /* At least medium screen */
 @media only screen and (min-width: 768px) {
     .profile-header-container, .profile-text-container {
