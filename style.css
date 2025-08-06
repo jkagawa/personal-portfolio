@@ -1,11 +1,281 @@
+/* Modern CSS Variables for consistent theming */
+:root {
+  --primary-color: #2563eb;
+  --secondary-color: #1e40af;
+  --accent-color: #3b82f6;
+  --text-primary: #1f2937;
+  --text-secondary: #6b7280;
+  --background-primary: #ffffff;
+  --background-secondary: #f9fafb;
+  --background-dark: #111827;
+  --border-color: #e5e7eb;
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+  --border-radius: 8px;
+  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Modern body styling */
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  line-height: 1.6;
+  color: var(--text-primary);
+  /* background: var(--background-primary); */
+  background: linear-gradient(135deg, #1e1e1e 0%, #2d2d2d 100%);
+  transition: var(--transition);
+}
+
+button {
+  all: unset;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Enhanced navbar */
+.navbar {
+  height: 4rem;
+  backdrop-filter: blur(20px);
+  background: rgba(30, 30, 30, 0.4);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .container {
+  background: transparent;
+}
+
+.nav-link {
+  position: relative;
+  padding: 0.5rem 1rem !important;
+  transition: var(--transition);
+  font-weight: 500;
+  background: none;
+  opacity: 0.7;
+}
+
+.nav-link:hover {
+  color: white !important;
+  opacity: 1.0;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: white;
+  transition: var(--transition);
+  transform: translateX(-50%);
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* Modern hero section */
+#about {
+  background: linear-gradient(135deg, #1e1e1e 0%, #2d2d2d 100%);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+#about::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="subtle" width="50" height="50" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="0.5" fill="rgba(0,0,0,0.02)"/><circle cx="10" cy="10" r="0.3" fill="rgba(0,0,0,0.015)"/><circle cx="40" cy="40" r="0.3" fill="rgba(0,0,0,0.015)"/></pattern></defs><rect width="100" height="100" fill="url(%23subtle)"/></svg>');
+  opacity: 0.3;
+}
+
+.banner-text-container {
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 16px;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  padding: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Enhanced profile image */
+.profile-image-containter {
+  overflow: hidden;
+  border-radius: 50%;
+  display: block;
+  border: 3px solid rgba(255, 255, 255, 0.8);
+  transition: var(--transition);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.profile-image-containter:hover {
+  transform: scale(1.02);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.15);
+}
+
+.profile-image {
+  filter: grayscale(0%);
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  transform: scale(1);
+}
+
+/* Modern project cards */
+.project-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 2rem 0;
+}
+
+.project-card {
+  background: var(--background-primary);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-md);
+  transition: var(--transition);
+  overflow: hidden;
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* Enhanced buttons */
+.button-style-dark, .button-style-light {
+  border: none;
+  background: var(--primary-color);
+  color: white;
+  border-radius: var(--border-radius);
+  padding: 0.75rem 1.5rem;
+  font-weight: 500;
+  transition: var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+
+.button-style-dark:hover, .button-style-light:hover {
+  background: var(--secondary-color);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+}
+
+/* Modern skill tags */
+.chiclet {
+  display: inline-block;
+  background: var(--primary-color);
+  color: white;
+  padding: 0.5rem 1rem;
+  margin: 0.25rem;
+  border-radius: 20px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+.chiclet:hover {
+  background: var(--secondary-color);
+  transform: translateY(-1px);
+}
+
+/* Enhanced contact form */
+.contact-container {
+  width: 500px;
+  max-width: 90%;
+  background: var(--background-primary);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-lg);
+  padding: 2rem;
+}
+
+.contact-container input,
+.contact-container textarea {
+  width: 100%;
+  border: 2px solid var(--border-color);
+  border-radius: var(--border-radius);
+  padding: 0.75rem;
+  transition: var(--transition);
+  font-size: 1rem;
+}
+
+.contact-container input:focus,
+.contact-container textarea:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+/* Modern toast */
+#toast {
+  background: var(--primary-color);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-lg);
+  border: none;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Loading animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+/* Responsive improvements */
+@media (max-width: 768px) {
+  .navbar {
+    height: 3.5rem;
+  }
+  
+  .banner-text-container {
+    margin: 1rem;
+    padding: 1rem 0.5rem;;
+  }
+  
+  .project-container {
+    padding: 1rem;
+  }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text-primary: #f9fafb;
+    --text-secondary: #d1d5db;
+    --background-primary: #111827;
+    --background-secondary: #1f2937;
+    --border-color: #374151;
+  }
+}
+
 body {
 	background-size: 800% 800%;
 	animation: gradient 15s ease infinite;
 	height: 100vh;
-}
-
-.navbar {
-    height: 4rem;
 }
 
 .navbar-brand {
@@ -20,21 +290,12 @@ body {
     box-shadow: 0 0 0 0.2rem;
 }
 
-.navbar .container {
-    background-color: black;
-}
-
 .brand-logo {
     height: 60px;
 }
 
 #main-section, #about {
     margin-top: 3.5rem;
-}
-
-#about {
-    background: linear-gradient(135deg, #004ff9, #000000);
-    height: 400px;
 }
 
 .portfolio-section {
@@ -66,11 +327,6 @@ body {
     object-fit: cover;
     transform: scale(1.7);
     transform-origin: 50% 50%;
-}
-
-.banner-text-container {
-    max-width: 700px;
-    color: white;
 }
 
 .contact-container {
@@ -110,6 +366,10 @@ body {
     border-radius: 5px;
 }
 
+#hero-heading2 {
+    color: #8c8b90 !important;
+}
+
 .project-container {
     max-width: 1200px;
     margin: auto;
@@ -137,11 +397,11 @@ body {
 }
 
 a:not(.social-links, .button-link):hover, .nav-link:hover {
-    filter: brightness(80%);
+    /* filter: brightness(100%); */
     cursor: pointer;
 }
 
-button:not(.navbar-toggler, .button-style-dark, .button-style-light):hover, input[type=submit]:hover, .social-links:hover {
+button:not(.navbar-toggler, .button-style-dark, .button-style-light, .nav-link:hover):hover, input[type=submit]:hover, .social-links:hover {
     opacity: 0.7;
 }
 
@@ -245,6 +505,10 @@ button:not(.navbar-toggler, .button-style-dark, .button-style-light):hover, inpu
 @media only screen and (max-width: 640px) {
     .navbar {
         height: 3.5rem;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
     }
     .navbar-brand {
         font-size: 1.25rem;
@@ -276,4 +540,206 @@ button:not(.navbar-toggler, .button-style-dark, .button-style-light):hover, inpu
     .nav-item {
         text-align: left;
     }
+}
+
+/* Skills section styling */
+.skill-category {
+  background: var(--background-primary);
+  border-radius: var(--border-radius);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+  height: 100%;
+}
+
+.skill-category:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.skill-category h3 {
+  color: var(--text-primary);
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+/* Enhanced project cards */
+.project-container {
+  background: var(--background-primary);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-sm);
+  margin: 2rem auto;
+  overflow: hidden;
+  transition: var(--transition);
+}
+
+.project-container:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* Improved form styling */
+.form-control {
+  border: 2px solid var(--border-color);
+  border-radius: var(--border-radius);
+  padding: 0.75rem;
+  transition: var(--transition);
+  font-size: 1rem;
+  background: var(--background-primary);
+  color: var(--text-primary);
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+  background: var(--background-primary);
+}
+
+.form-label {
+  font-weight: 500;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.btn-dark {
+  background: var(--primary-color);
+  border: none;
+  border-radius: var(--border-radius);
+  padding: 0.75rem 1.5rem;
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+.btn-dark:hover {
+  background: var(--secondary-color);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+}
+
+/* Enhanced social links */
+.social-links {
+  transition: var(--transition);
+  display: inline-block;
+}
+
+.social-links:hover {
+  transform: translateY(-2px);
+  color: var(--primary-color) !important;
+}
+
+/* Improved section spacing */
+section {
+  padding: 4rem 0;
+}
+
+section:first-of-type {
+  padding-top: 6rem;
+}
+
+/* Enhanced typography */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--text-primary);
+}
+
+p {
+  line-height: 1.7;
+  color: var(--text-secondary);
+}
+
+/* Hero section specific typography */
+#about h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+}
+
+#about p {
+  font-size: 1.125rem;
+  line-height: 1.8;
+  color: var(--text-primary);
+}
+
+#other-projects-heading, #contact-heading, #skills-heading {
+  color: #1f2937;
+}
+
+#form btn {
+    box-sizing: border-box;
+}
+
+.accordion-button:focus, .accordion-button:active, .accordion-button:not(.collapsed) {
+    box-shadow: none;
+    background-color: #e5e5e5;
+    color: #1f2937;
+}
+
+/* Better responsive design */
+@media (max-width: 768px) {
+  .navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+  
+  .skill-category {
+    margin-bottom: 1rem;
+  }
+  
+  .project-container {
+    margin: 1rem;
+  }
+  
+  section {
+    padding: 2rem 0;
+  }
+
+  #about p {
+    font-size: 1rem;
+  }
+}
+
+/* Loading states */
+.loading {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+/* Focus states for accessibility */
+button:focus,
+a:focus,
+input:focus,
+textarea:focus {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
+}
+
+/* Print styles */
+@media print {
+  .navbar,
+  #toast,
+  .social-links {
+    display: none !important;
+  }
+  
+  body {
+    background: white !important;
+    color: black !important;
+  }
+  
+  .project-container {
+    break-inside: avoid;
+    box-shadow: none;
+    border: 1px solid #ccc;
+  }
 }

@@ -7,87 +7,151 @@
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-
         gtag('config', 'G-D495LVQFP4');
     </script>
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="Description" content="Enter your description here"/>
+    <meta name="description" content="Joshua Kagawa - Full Stack Developer specializing in JavaScript, Python, React, and Flask. View my portfolio of web applications and projects."/>
+    <meta name="keywords" content="full stack developer, JavaScript, Python, React, Flask, web development, portfolio"/>
+    <meta name="author" content="Joshua Kagawa"/>
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="https://your-domain.com/"/>
+    <meta property="og:title" content="Joshua Kagawa | Full Stack Developer"/>
+    <meta property="og:description" content="Full Stack Developer specializing in JavaScript, Python, React, and Flask"/>
+    <meta property="og:image" content="static/images/profile-photo2.jpeg"/>
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image"/>
+    <meta property="twitter:url" content="https://your-domain.com/"/>
+    <meta property="twitter:title" content="Joshua Kagawa | Full Stack Developer"/>
+    <meta property="twitter:description" content="Full Stack Developer specializing in JavaScript, Python, React, and Flask"/>
+    <meta property="twitter:image" content="static/images/profile-photo2.jpeg"/>
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <script src="https://kit.fontawesome.com/3ef1af0600.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/x-icon" href="static/images/favicon.png">
-    <title>Joshua Kagawa | Portfolio</title>
+    <title>Joshua Kagawa | Full Stack Developer</title>
 </head>
 <body>
 
-    <!-- Navbar -->
-    <nav class="navbar flex-wrap bg-black fixed-top p-0">
+    <!-- Navigation -->
+    <nav class="navbar flex-wrap fixed-top p-0" role="navigation" aria-label="Main navigation">
         <div class="container mw-100">
-            <!-- <a href="index.html" class="navbar-brand text-light d-flex align-items-center mt-2 mb-2">
-                <div>Joshua Kagawa</div>
-            </a> -->
-            <!-- <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu"><i class="fa-solid fa-bars fs-2"></i></button> -->
-
             <ul class="navbar-nav flex-row mb-0 justify-content-end align-items-center w-100">
-                <li id="UpIcon">
-                    <div onclick="scrollToTop()" class="nav-link text-light fs-3"><i class="fa-solid fa-chevron-up"></i></div>
+                <li id="UpIcon" aria-label="Scroll to top">
+                    <button onclick="scrollToTop()" class="nav-link text-light fs-5" aria-label="Scroll to top">
+                        <i class="fa-solid fa-chevron-up" aria-hidden="true"></i>
+                    </button>
                 </li>
                 <li>
-                    <div onclick="scrollToPortfolio()" class="nav-link text-light fs-5">Portfolio</div>
+                    <button onclick="scrollToPortfolio()" class="nav-link text-light fs-5">Portfolio</button>
                 </li>
                 <li>
-                    <div onclick="scrollToBottom()" class="nav-link text-light fs-5">Contact</div>
+                    <button onclick="scrollToBottom()" class="nav-link text-light fs-5">Contact</button>
                 </li>
             </ul>
         </div>
     </nav>
 
-    <!-- Toast -->
-    <div id="toast" class="text-light text-center w-100 position-fixed align-items-center fs-5">
+    <!-- Toast Notification -->
+    <div id="toast" class="text-light text-center w-100 position-fixed align-items-center fs-5" role="alert" aria-live="polite">
         <div id="toast-text">Your message has been submitted, thank you!</div>
         <div id="toast-button">
-            <button onclick="closeToast()"><i class="fa-solid fa-xmark"></i></button>
+            <button onclick="closeToast()" aria-label="Close notification">
+                <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+            </button>
         </div>
     </div>
 
-    <!-- About section -->
-    <section id="about" class="text-black text-left w-100 p-3 d-flex">
+    <!-- Hero Section -->
+    <section id="about" class="text-black text-left w-100 p-3 d-flex" aria-labelledby="hero-heading">
         <div class="banner-container d-flex justify-content-center align-items-center m-0 flex-column-reverse flex-lg-row w-100">
-                <div class="d-flex justify-content-center align-items-center flex-column">
-                    <div class="banner-text-container pt-2 pb-2 pt-lg-2 pb-lg-2 ms-4 me-4 ms-lg-1 me-lg-1 border border-2 rounded border-white">
-                        <div class="d-flex align-items-start align-items-md-center flex-column flex-md-row m-auto profile-header-container">
-                            <div class="profile-image-containter m-3">
-                                <img src="static/images/profile-photo2.jpeg" alt="Profile picture" class="img-fluid profile-image" draggable="false">
-                            </div>
-                            <div class="ms-3 me-3">
-                                <span class="fs-5 fw-bold">Joshua Kagawa</span>
-                                <span class="fs-5 lh-1">| Full Stack Developer</span>
-                            </div>
+            <div class="d-flex justify-content-center align-items-center flex-column">
+                <div class="banner-text-container">
+                    <div class="d-flex align-items-start align-items-md-center flex-column flex-md-row m-auto profile-header-container">
+                        <div class="profile-image-containter m-3">
+                            <img src="static/images/profile-photo2.jpeg" alt="Joshua Kagawa - Full Stack Developer" class="img-fluid profile-image" draggable="false">
                         </div>
-                        <!-- <div class="m-3 d-flex align-items-center justify-content-start">
-                            <i class="fa-brands fa-js fs-1 mx-2" alt="JavaScript icon"></i>
-                            <i class="fa-brands fa-python fs-1 mx-2" alt="Python icon"></i>
-                            <i class="fa-brands fa-react fs-1 mx-2" alt="React icon"></i>
-                        </div> -->
-                        <div class="profile-text-container m-3 mt-2 fs-6">I am an experienced full stack developer with expertise in diverse languages and frameworks. In particular, I like coding with JavaScript, Python, React, and Flask. I have experience building full-fledged applications from concept to production.</div>
+                        <div class="ms-3 me-3">
+                            <h1 id="hero-heading" class="fs-1 fs-sm-2 fw-bold mb-1">Joshua Kagawa</h1>
+                            <p id="hero-heading2" class="fs-1 fw-bold lh-1 mb-0">Full Stack Developer</p>
+                        </div>
+                    </div>
+                    <div class="profile-text-container m-3 fs-6">
+                        <p>I am an experienced full stack developer with expertise in diverse languages and frameworks. 
+                        I specialize in JavaScript, Python, React, and Flask, building full-fledged applications from concept to production. 
+                        Passionate about creating efficient, scalable solutions that solve real-world problems.</p>
                     </div>
                 </div>
+            </div>
         </div>
     </section>
 
-    <!-- Portfolio: Seer Weather -->
-    <section id="portfolio" class="text-left portfolio-section">
-        <h1 class="p-2 m-0 text-center bg-black fw-bold pt-4 pb-4 border-bottom" id="portfolio-header">Web Apps and Projects</h1>
-        <div class="project-container pb-4">
+    <!-- Skills Section -->
+    <section id="skills" class="py-5 bg-light" aria-labelledby="skills-heading">
+        <div class="container">
+            <h2 id="skills-heading" class="text-center mb-5">Skills & Technologies</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="skill-category">
+                        <h3 class="h5 mb-3">Frontend</h3>
+                        <div class="skill-tags">
+                            <span class="chiclet">React</span>
+                            <span class="chiclet">TypeScript</span>
+                            <span class="chiclet">JavaScript</span>
+                            <span class="chiclet">HTML/CSS</span>
+                            <span class="chiclet">Tailwind CSS</span>
+                            <span class="chiclet">Bootstrap</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="skill-category">
+                        <h3 class="h5 mb-3">Backend</h3>
+                        <div class="skill-tags">
+                            <span class="chiclet">Python</span>
+                            <span class="chiclet">Flask</span>
+                            <span class="chiclet">Node.js</span>
+                            <span class="chiclet">REST APIs</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="skill-category">
+                        <h3 class="h5 mb-3">Database & Tools</h3>
+                        <div class="skill-tags">
+                            <span class="chiclet">PostgreSQL</span>
+                            <span class="chiclet">MySQL</span>
+                            <span class="chiclet">Git</span>
+                            <span class="chiclet">Docker</span>
+                            <span class="chiclet">AWS</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="text-left portfolio-section" aria-labelledby="portfolio-heading">
+        <h2 id="portfolio-heading" class="p-2 m-0 text-center bg-black fw-bold pt-4 pb-4 border-bottom">Featured Projects</h2>
+        
+        <!-- Seer Weather -->
+        <article class="project-container pb-4">
             <div class="d-flex justify-content-center align-items-center align-items-md-center flex-column-reverse flex-md-row-reverse">
                 <div class="col-10 col-md-7 d-flex justify-content-center align-items-left flex-column text-left">
-                    <div class="fs-2 fw-light ms-3 me-3">Seer Weather</div>
+                    <h3 class="fs-2 fw-light ms-3 me-3">Seer Weather</h3>
                     <div class="fs-6 m-3 lh-base">
-                        <div>
+                        <div class="mb-3">
                             <div class="chiclet">React</div>
                             <div class="chiclet">TypeScript</div>
                             <div class="chiclet">Tailwind CSS</div>
@@ -97,37 +161,41 @@
                             <div class="chiclet">PostgreSQL</div>
                             <div class="chiclet">API</div>
                         </div>
-                        <div class="mt-2 mt-md-3">A web app that displays weather information based on the location selected. Weather data is pulled from the Open-Meteo API, and includes historical as well as forcast data. It allows users to create and sign into their account to store their saved locations in a database in the cloud. The background image dynamically updates based on the current weather.</div>
+                        <p class="mt-2 mt-md-3">A comprehensive weather application that provides real-time and forecast weather data using the Open-Meteo API. Features user authentication, saved locations, and dynamic background images based on current weather conditions. Built with React frontend and Flask backend with PostgreSQL database.</p>
                     </div>
                     <div class="d-flex flex-column ms-3 me-3">
-                        <a href="https://seer-weather.netlify.app/" target="_blank" class="button-link mb-1">
-                            <button class="button-style-dark fs-6"><i class="fa-regular fa-eye"></i> Website</button>
+                        <a href="https://seer-weather.netlify.app/" target="_blank" rel="noopener noreferrer" class="button-link mb-1">
+                            <button class="button-style-dark fs-6">
+                                <i class="fa-regular fa-eye" aria-hidden="true"></i> Live Demo
+                            </button>
                         </a>
-                        <a href="https://github.com/jkagawa/weather-app-frontend" target="_blank" class="button-link mb-1">
-                            <button class="button-style-dark fs-6"><i class="fa-solid fa-code"></i> Code (front-end)</button>
+                        <a href="https://github.com/jkagawa/weather-app-frontend" target="_blank" rel="noopener noreferrer" class="button-link mb-1">
+                            <button class="button-style-dark fs-6">
+                                <i class="fa-solid fa-code" aria-hidden="true"></i> Frontend Code
+                            </button>
                         </a>
-                        <a href="https://github.com/jkagawa/weather-app-backend" target="_blank" class="button-link mb-1">
-                            <button class="button-style-dark fs-6"><i class="fa-solid fa-code"></i> Code (back-end)</button>
+                        <a href="https://github.com/jkagawa/weather-app-backend" target="_blank" rel="noopener noreferrer" class="button-link mb-1">
+                            <button class="button-style-dark fs-6">
+                                <i class="fa-solid fa-code" aria-hidden="true"></i> Backend Code
+                            </button>
                         </a>
                     </div>
                 </div>
                 <div class="col-10 col-md-5 d-flex flex-column justify-content-center align-items-center">
                     <div class="p-4">
-                        <img src="static/images/seer-weather-desktop.png" alt="Seer Weather webpage" class="w-100 rounded-lg shadow-lg">
+                        <img src="static/images/seer-weather-desktop.png" alt="Seer Weather application screenshot" class="w-100 rounded-lg shadow-lg">
                     </div>
                 </div>
             </div>
-        </div>    
-    </section>
+        </article>
 
-    <!-- Portfolio: Climbing Spot -->
-    <section class="text-left portfolio-section">
-        <div class="project-container pt-2 pb-4">
+        <!-- Climbing Spot -->
+        <article class="project-container pt-2 pb-4">
             <div class="d-flex justify-content-center align-items-center align-items-md-center flex-column-reverse flex-md-row-reverse">
                 <div class="col-10 col-md-7 d-flex justify-content-center align-items-left flex-column text-left">
-                    <div class="fs-2 fw-light ms-3 me-3">Climbing Spot</div>
+                    <h3 class="fs-2 fw-light ms-3 me-3">Climbing Spot</h3>
                     <div class="fs-6 m-3 lh-base">
-                        <div>
+                        <div class="mb-3">
                             <div class="chiclet">Flask</div>
                             <div class="chiclet">Python</div>
                             <div class="chiclet">MySQL</div>
@@ -135,210 +203,222 @@
                             <div class="chiclet">Jinja</div>
                             <div class="chiclet">Google Maps API</div>
                         </div>
-                        <div class="mt-2 mt-md-3">A web app for discovering and keeping track of climbing locations. It allows users to add a location and auto-generate a link to search it on Google Maps. Users are also able to sign up and log in through their Google account and unlock features like editing and removing the location or their climber profile.</div>
+                        <p class="mt-2 mt-md-3">A web application for discovering and managing climbing locations. Features include user authentication via Google OAuth, location management with Google Maps integration, and a responsive design. Users can add, edit, and track their favorite climbing spots.</p>
                     </div>
                     <div class="d-flex flex-column ms-3 me-3">
-                        <a href="https://climbingspot.pythonanywhere.com/" target="_blank" class="button-link mb-1">
-                            <button class="button-style-dark fs-6"><i class="fa-regular fa-eye"></i> Website</button>
+                        <a href="https://climbingspot.pythonanywhere.com/" target="_blank" rel="noopener noreferrer" class="button-link mb-1">
+                            <button class="button-style-dark fs-6">
+                                <i class="fa-regular fa-eye" aria-hidden="true"></i> Live Demo
+                            </button>
                         </a>
-                        <a href="https://github.com/jkagawa/fsnd-capstone-project" target="_blank" class="button-link mb-1">
-                            <button class="button-style-dark fs-6"><i class="fa-solid fa-code"></i> Code</button>
+                        <a href="https://github.com/jkagawa/fsnd-capstone-project" target="_blank" rel="noopener noreferrer" class="button-link mb-1">
+                            <button class="button-style-dark fs-6">
+                                <i class="fa-solid fa-code" aria-hidden="true"></i> Source Code
+                            </button>
                         </a>
                     </div>
                 </div>
                 <div class="col-10 col-md-5 d-flex flex-column justify-content-center align-items-center">
                     <div class="p-4">
-                        <img src="static/images/climbing-spot-desktop.png" alt="The Climbing Spot webpage" class="w-100 rounded-lg shadow-lg">
+                        <img src="static/images/climbing-spot-desktop.png" alt="Climbing Spot application screenshot" class="w-100 rounded-lg shadow-lg">
                     </div>
                 </div>
             </div>
-        </div>    
-    </section>
+        </article>
 
-    <!-- Portfolio: Face Recognition -->
-    <section class="text-left portfolio-section">
-        <div class="project-container pt-2 pb-4">
+        <!-- Face Recognition -->
+        <article class="project-container pt-2 pb-4">
             <div class="d-flex justify-content-center align-items-center align-items-md-center flex-column-reverse flex-md-row-reverse">
                 <div class="col-10 col-md-7 d-flex justify-content-center align-items-left flex-column text-left">
-                    <div class="fs-2 fw-light ms-3 me-3">Face Recognition</div>
+                    <h3 class="fs-2 fw-light ms-3 me-3">Face Recognition</h3>
                     <div class="fs-6 m-3 lh-base">
-                        <div>
+                        <div class="mb-3">
                             <div class="chiclet">React</div>
                             <div class="chiclet">Clarifai API</div>
                         </div>
-                        <div class="mt-2 mt-md-3">A web app that uses AI to recognize faces in an image.</div>
+                        <p class="mt-2 mt-md-3">An AI-powered web application that uses machine learning to detect and recognize faces in uploaded images. Built with React frontend and integrated with Clarifai's face recognition API for real-time image analysis.</p>
                     </div>
                     <div class="d-flex flex-column ms-3 me-3">
-                        <a href="https://face-recognition-site.netlify.app/" target="_blank" class="button-link mb-1">
-                            <button class="button-style-light fs-6"><i class="fa-regular fa-eye"></i> Website</button>
+                        <a href="https://face-recognition-site.netlify.app/" target="_blank" rel="noopener noreferrer" class="button-link mb-1">
+                            <button class="button-style-light fs-6">
+                                <i class="fa-regular fa-eye" aria-hidden="true"></i> Live Demo
+                            </button>
                         </a>
-                        <a href="https://github.com/jkagawa/face-recognition" target="_blank" class="button-link mb-1">
-                            <button class="button-style-light fs-6"><i class="fa-solid fa-code"></i> Code</button>
+                        <a href="https://github.com/jkagawa/face-recognition" target="_blank" rel="noopener noreferrer" class="button-link mb-1">
+                            <button class="button-style-light fs-6">
+                                <i class="fa-solid fa-code" aria-hidden="true"></i> Source Code
+                            </button>
                         </a>
                     </div>
                 </div>
                 <div class="col-10 col-md-5 d-flex flex-column justify-content-center align-items-center">
                     <div class="p-4">
-                        <img src="static/images/face-recognition-desktop.png" alt="Face Recognition webpage" class="w-100 rounded-lg shadow-lg">
+                        <img src="static/images/face-recognition-desktop.png" alt="Face Recognition application screenshot" class="w-100 rounded-lg shadow-lg">
                     </div>
                 </div>
             </div>
-        </div>    
-    </section>
+        </article>
 
-    <!-- Portfolio: Lift Up Gym -->
-    <section class="text-left portfolio-section">
-        <div class="project-container pt-2 pb-4">
+        <!-- Lift Up Gym -->
+        <article class="project-container pt-2 pb-4">
             <div class="d-flex justify-content-center align-items-center align-items-md-center flex-column-reverse flex-md-row-reverse">
                 <div class="col-10 col-md-7 d-flex justify-content-center align-items-left flex-column text-left">
-                    <div class="fs-2 fw-light ms-3 me-3">Lift Up Gym</div>
+                    <h3 class="fs-2 fw-light ms-3 me-3">Lift Up Gym</h3>
                     <div class="fs-6 m-3 lh-base">
-                        <div>
+                        <div class="mb-3">
                             <div class="chiclet">HTML/CSS</div>
                             <div class="chiclet">JavaScript</div>
                             <div class="chiclet">Bootstrap</div>
                         </div>
-                        <div class="mt-2 mt-md-3">A responsive web app showcasing the culture and ammenities of a mock gym. Includes an embedded Google map, images in grids that reorder based on the screen size, a mock login page, and toast notification upon successful log in.</div>
+                        <p class="mt-2 mt-md-3">A responsive website showcasing a modern gym's amenities and culture. Features include embedded Google Maps, responsive image galleries, interactive login simulation, and toast notifications. Demonstrates strong frontend development skills with modern web standards.</p>
                     </div>
                     <div class="d-flex flex-column ms-3 me-3">
-                        <a href="https://jkagawa.github.io/gym-website/" target="_blank" class="button-link mb-1">
-                            <button class="button-style-light fs-6"><i class="fa-regular fa-eye"></i> Website</button>
+                        <a href="https://jkagawa.github.io/gym-website/" target="_blank" rel="noopener noreferrer" class="button-link mb-1">
+                            <button class="button-style-light fs-6">
+                                <i class="fa-regular fa-eye" aria-hidden="true"></i> Live Demo
+                            </button>
                         </a>
-                        <a href="https://github.com/jkagawa/gym-website" target="_blank" class="button-link mb-1">
-                            <button class="button-style-light fs-6"><i class="fa-solid fa-code"></i> Code</button>
+                        <a href="https://github.com/jkagawa/gym-website" target="_blank" rel="noopener noreferrer" class="button-link mb-1">
+                            <button class="button-style-light fs-6">
+                                <i class="fa-solid fa-code" aria-hidden="true"></i> Source Code
+                            </button>
                         </a>
                     </div>
                 </div>
                 <div class="col-10 col-md-5 d-flex flex-column justify-content-center align-items-center">
                     <div class="p-4">
-                        <img src="static/images/lift-up-gym-desktop.png" alt="Lift Up Gym webpage" class="w-100 rounded-lg shadow-lg border border-custom-gray">
+                        <img src="static/images/lift-up-gym-desktop.png" alt="Lift Up Gym website screenshot" class="w-100 rounded-lg shadow-lg border border-custom-gray">
                     </div>
                 </div>
             </div>
-        </div>    
-    </section>
+        </article>
 
-    <!-- Portfolio: Spotify Songs -->
-    <section class="text-left portfolio-section">
-        <div class="project-container pt-2 pb-4">
+        <!-- Spotify Songs -->
+        <article class="project-container pt-2 pb-4">
             <div class="d-flex justify-content-center align-items-center align-items-md-center flex-column-reverse flex-md-row-reverse">
                 <div class="col-10 col-md-7 d-flex justify-content-center align-items-left flex-column text-left">
-                    <div class="fs-2 fw-light ms-3 me-3">Spotify Mix</div>
+                    <h3 class="fs-2 fw-light ms-3 me-3">Spotify Mix</h3>
                     <div class="fs-6 m-3 lh-base">
-                        <div>
+                        <div class="mb-3">
                             <div class="chiclet">React</div>
                             <div class="chiclet">Spotify API</div>
                         </div>
-                        <div class="mt-2 mt-md-3">A web app displaying a curated list of Spotify songs, playable by clicking on the images.</div>
+                        <p class="mt-2 mt-md-3">A curated music player application that displays and plays a selection of Spotify songs. Features clickable album artwork for direct playback and demonstrates integration with Spotify's Web API for music streaming capabilities.</p>
                     </div>
                     <div class="d-flex flex-column ms-3 me-3">
-                        <a href="https://my-spotify-songs.netlify.app/" target="_blank" class="button-link mb-1">
-                            <button class="button-style-light fs-6"><i class="fa-regular fa-eye"></i> Website</button>
+                        <a href="https://my-spotify-songs.netlify.app/" target="_blank" rel="noopener noreferrer" class="button-link mb-1">
+                            <button class="button-style-light fs-6">
+                                <i class="fa-regular fa-eye" aria-hidden="true"></i> Live Demo
+                            </button>
                         </a>
-                        <a href="https://github.com/jkagawa/spotify-songs" target="_blank" class="button-link mb-1">
-                            <button class="button-style-light fs-6"><i class="fa-solid fa-code"></i> Code</button>
+                        <a href="https://github.com/jkagawa/spotify-songs" target="_blank" rel="noopener noreferrer" class="button-link mb-1">
+                            <button class="button-style-light fs-6">
+                                <i class="fa-solid fa-code" aria-hidden="true"></i> Source Code
+                            </button>
                         </a>
                     </div>
                 </div>
                 <div class="col-10 col-md-5 d-flex flex-column justify-content-center align-items-center">
                     <div class="p-4">
-                        <img src="static/images/spotify-songs-desktop.png" alt="Spotify Mix webpage" class="w-100 rounded-lg shadow-lg">
+                        <img src="static/images/spotify-songs-desktop.png" alt="Spotify Mix application screenshot" class="w-100 rounded-lg shadow-lg">
                     </div>
                 </div>
             </div>
-        </div>    
+        </article>
     </section>
 
-    <!-- Other projects header -->
-    <div class="bg-white position-relative other-project-header">
-        <h1 class="p-2 m-0 text-center fw-bold pt-4 pb-4 border-top">Other Projects</h1>
-    </div>
-
-    <!-- Accordion -->
-    <div class="accordion bg-white position-relative" id="accordionParent">
-        <div class="accordion-item bg-white">
-          <h2 class="accordion-header" id="headingOne">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                <div class="fs-4 fw-light text-center w-100">Artworks from the ARTIC API</div>
-            </button>
-          </h2>
-          <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionParent">
-            <div class="accordion-body">
-                <!-- Portfolio: Artworks from the Art Institute of Chicago API -->
-                <section class="text-left">
-                    <div class="project-container-small pt-2 pb-4">
-                        <div class="d-flex justify-content-center align-items-center align-items-md-center flex-row-reverse">
-                            <div class="col-7 d-flex justify-content-center align-items-center flex-column text-center">
-                                <div class="fs-6 m-3 lh-1">
-                                    <div class="mb-2 mb-md-3">&#x2022; A web app built using <strong>HTML/CSS</strong> and <strong>Boostrap</strong></div>
-                                    <div class="mb-2 mb-md-3">&#x2022; Displays images pulled from the <strong>API</strong></div>
+    <!-- Other Projects Section -->
+    <section class="bg-white position-relative" aria-labelledby="other-projects-heading">
+        <h2 id="other-projects-heading" class="p-2 m-0 text-center fw-bold pt-4 pb-4 border-top">Other Projects</h2>
+        
+        <div class="accordion" id="accordionParent" role="tablist" aria-multiselectable="true">
+            <div class="accordion-item bg-white">
+                <h3 class="accordion-header" id="headingOne">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                        <span class="fs-4 fw-light text-center w-100">Artworks from the ARTIC API</span>
+                    </button>
+                </h3>
+                <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionParent">
+                    <div class="accordion-body">
+                        <article class="text-left">
+                            <div class="project-container-small pt-2 pb-4">
+                                <div class="d-flex justify-content-center align-items-center align-items-md-center flex-row-reverse">
+                                    <div class="col-7 d-flex justify-content-center align-items-center flex-column text-center">
+                                        <div class="fs-6 m-3 lh-1">
+                                            <p class="mb-2 mb-md-3">&#x2022; A web app built using <strong>HTML/CSS</strong> and <strong>Bootstrap</strong></p>
+                                            <p class="mb-2 mb-md-3">&#x2022; Displays images pulled from the <strong>Art Institute of Chicago API</strong></p>
+                                        </div>
+                                        <a href="https://jkagawa.github.io/artworks-from-artic-api/" target="_blank" rel="noopener noreferrer" class="button-link">
+                                            <button class="button-style-dark fs-5">View Project</button>
+                                        </a>
+                                    </div>
+                                    <div class="col-5 d-flex flex-column justify-content-center align-items-center">
+                                        <div class="p-4">
+                                            <img src="static/images/artic-api-demo.png" alt="Artworks from ARTIC API screenshot" class="w-100 rounded-lg shadow-lg">
+                                        </div>
+                                    </div>
                                 </div>
-                                <a href="https://jkagawa.github.io/artworks-from-artic-api/" target="_blank" class="button-link">
-                                    <button class="button-style-dark fs-5">Go to website</button>
-                                </a>
-                            </div>
-                            <div class="col-5 d-flex flex-column justify-content-center align-items-center">
-                                <div class="p-4">
-                                    <img src="static/images/artic-api-demo.png" alt="Quote Generator webpage" class="w-100 rounded-lg shadow-lg">
-                                </div>
-                            </div>
-                        </div>
-                    </div>    
-                </section>
+                            </div>    
+                        </article>
+                    </div>
+                </div>
             </div>
-          </div>
-        </div>
 
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="headingTwo">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                <div class="fs-4 fw-light text-center w-100">Pong</div>
-            </button>
-          </h2>
-          <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionParent">
-            <div class="accordion-body">
-                <!-- Portfolio: Pong -->
-                <section class="text-left">
-                    <div class="project-container-small pt-2 pb-4">
-                        <div class="d-flex justify-content-center align-items-center align-items-md-center flex-row-reverse">
-                            <div class="col-7 d-flex justify-content-center align-items-center flex-column text-center">
-                                <div class="fs-6 m-3 lh-1">
-                                    <div class="mb-2 mb-md-3">&#x2022; A web app built using <strong>HTML/CSS</strong></div>
-                                    <div class="mb-2 mb-md-3">&#x2022; Game physics and logic written in <strong>JavaScript</strong></div>
+            <div class="accordion-item">
+                <h3 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        <span class="fs-4 fw-light text-center w-100">Pong Game</span>
+                    </button>
+                </h3>
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionParent">
+                    <div class="accordion-body">
+                        <article class="text-left">
+                            <div class="project-container-small pt-2 pb-4">
+                                <div class="d-flex justify-content-center align-items-center align-items-md-center flex-row-reverse">
+                                    <div class="col-7 d-flex justify-content-center align-items-center flex-column text-center">
+                                        <div class="fs-6 m-3 lh-1">
+                                            <p class="mb-2 mb-md-3">&#x2022; A web app built using <strong>HTML/CSS</strong></p>
+                                            <p class="mb-2 mb-md-3">&#x2022; Game physics and logic written in <strong>JavaScript</strong></p>
+                                        </div>
+                                        <a href="https://jkagawa.github.io/pong/" target="_blank" rel="noopener noreferrer" class="button-link">
+                                            <button class="button-style-light fs-5">Play Game</button>
+                                        </a>
+                                    </div>
+                                    <div class="col-5 d-flex flex-column justify-content-center align-items-center">
+                                        <div class="p-4">
+                                            <img src="static/images/pong-demo.png" alt="Pong game screenshot" class="w-100 rounded-lg shadow-lg">
+                                        </div>
+                                    </div>
                                 </div>
-                                <a href="https://jkagawa.github.io/pong/" target="_blank" class="button-link">
-                                    <button class="button-style-light fs-5">Go to website</button>
-                                </a>
-                            </div>
-                            <div class="col-5 d-flex flex-column justify-content-center align-items-center">
-                                <div class="p-4">
-                                    <img src="static/images/pong-demo.png" alt="Pong webpage" class="w-100 rounded-lg shadow-lg">
-                                </div>
-                            </div>
-                        </div>
-                    </div>    
-                </section>
+                            </div>    
+                        </article>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
+    </section>
 
-    </div>
-
-    <!-- Contact section -->
-    <section id="contact" class="text-black bg-white text-left">
-        <h1 class="p-2 m-0 text-center fw-bold pt-4 pb-4">Contact</h1>
+    <!-- Contact Section -->
+    <section id="contact" class="text-black bg-white text-left" aria-labelledby="contact-heading">
+        <h2 id="contact-heading" class="p-2 m-0 text-center fw-bold pt-4 pb-4">Get In Touch</h2>
         <div>
             <div class="d-flex justify-content-center align-items-center flex-column col-sm-12">
                 <div class="contact-container pt-4 pb-5 ms-1 me-1">
-                    <div class="h2">Enter your message below</div>
-                    <form id="form" action="https://formspree.io/xzbkzzgg" method="POST">
-                        <label for="text-name">Name</label><br>
-                        <input type="text" id="text-name" name="name" class="mt-2 mb-2 p-2 rounded" autocomplete="off" required><br>
-                        <label for="text-email">Email</label><br>
-                        <input type="text" id="text-email" name="email" class="mt-2 mb-2 p-2 rounded" autocomplete="off" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"><br>
-                        <label for="message">Message</label><br>
-                        <textarea name="message" id="message" name="message" class="mt-2 mb-2 p-2 rounded" rows="6" required></textarea><br>
-                        <input type="submit" value="Submit" class="fs-4 bg-black text-light mt-2 mb-2 rounded">
+                    <h3 class="h2 mb-4">Let's work together</h3>
+                    <form id="form" action="https://formspree.io/xzbkzzgg" method="POST" aria-label="Contact form">
+                        <div class="mb-3">
+                            <label for="text-name" class="form-label">Name</label>
+                            <input type="text" id="text-name" name="name" class="form-control" autocomplete="name" required aria-required="true">
+                        </div>
+                        <div class="mb-3">
+                            <label for="text-email" class="form-label">Email</label>
+                            <input type="email" id="text-email" name="email" class="form-control" autocomplete="email" required aria-required="true" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea name="message" id="message" class="form-control" rows="6" required aria-required="true" placeholder="Tell me about your project..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-dark fs-4 w-100">Send Message</button>
                     </form>
                 </div>
             </div>     
@@ -346,10 +426,17 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-white">
+    <footer class="bg-white" role="contentinfo">
         <div class="text-dark text-center p-3 d-flex justify-content-center">
-            <a href="https://github.com/jkagawa" class="social-links text-black fs-3 m-2" target="_blank"><i class="fa-brands fa-github"></i></a>
-            <a href="https://www.linkedin.com/in/joshuakagawa" class="social-links text-black fs-3 m-2" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://github.com/jkagawa" class="social-links text-black fs-3 m-2" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile">
+                <i class="fa-brands fa-github" aria-hidden="true"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/joshuakagawa" class="social-links text-black fs-3 m-2" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile">
+                <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+            </a>
+        </div>
+        <div class="text-center text-muted pb-3">
+            <small>&copy; 2025 Joshua Kagawa. All rights reserved.</small>
         </div>
     </footer>
 
