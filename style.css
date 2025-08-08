@@ -439,11 +439,6 @@ button:not(.navbar-toggler, .button-style-dark, .button-style-light, .nav-link:h
     color: white;
 }
 
-.portfolio-section {
-    color: white;
-    background-color: #2d2d2d;
-}
-
 .accordion-collapse {
     --bs-text-opacity: 1;
     color: rgba(var(--bs-white-rgb),var(--bs-text-opacity))!important;
@@ -612,16 +607,12 @@ p {
   color: var(--text-primary);
 }
 
-#other-projects-heading, #contact-heading, #skills-heading {
+#other-projects-heading, #contact-heading, #skills-heading, #portfolio-heading{
   color: #1f2937;
 }
 
 #form btn {
     box-sizing: border-box;
-}
-
-#portfolio-heading {
-  background-color: #2d2d2d;;
 }
 
 .mobile-image {
