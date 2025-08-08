@@ -99,16 +99,17 @@
     <!-- Skills Section -->
     <section id="skills" class="py-5 bg-light" aria-labelledby="skills-heading">
         <div class="container">
-            <h2 id="skills-heading" class="text-center mb-5">Skills & Technologies</h2>
+            <h2 id="skills-heading" class="text-center mb-5">Tech Stack</h2>
             <div class="row">
                 <div class="col-md-4 mb-4">
                     <div class="skill-category">
                         <h3 class="h5 mb-3">Frontend</h3>
                         <div class="skill-tags">
+                            <span class="chiclet">JavaScript</span>
                             <span class="chiclet">React</span>
                             <span class="chiclet">TypeScript</span>
-                            <span class="chiclet">JavaScript</span>
-                            <span class="chiclet">HTML/CSS</span>
+                            <span class="chiclet">Redux</span>
+                            <span class="chiclet">Jinja</span>
                             <span class="chiclet">Tailwind CSS</span>
                             <span class="chiclet">Bootstrap</span>
                         </div>
@@ -119,21 +120,47 @@
                         <h3 class="h5 mb-3">Backend</h3>
                         <div class="skill-tags">
                             <span class="chiclet">Python</span>
+                            <span class="chiclet">PostgreSQL</span>
+                            <span class="chiclet">MySQL</span>
                             <span class="chiclet">Flask</span>
+                            <span class="chiclet">SQLAlchemy</span>
+                            <span class="chiclet">Regex</span>
                             <span class="chiclet">Node.js</span>
                             <span class="chiclet">REST APIs</span>
+                            <span class="chiclet">MongoDB</span>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4 mb-4">
                     <div class="skill-category">
-                        <h3 class="h5 mb-3">Database & Tools</h3>
+                        <h3 class="h5 mb-3">Dev Ops</h3>
                         <div class="skill-tags">
-                            <span class="chiclet">PostgreSQL</span>
-                            <span class="chiclet">MySQL</span>
                             <span class="chiclet">Git</span>
-                            <span class="chiclet">Docker</span>
+                            <span class="chiclet">CI/CD</span>
+                            <span class="chiclet">Bash</span>
+                            <span class="chiclet">PowerShell</span>
                             <span class="chiclet">AWS</span>
+                            <span class="chiclet">Docker</span>
+                            <span class="chiclet">Kubernetes</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="skill-category">
+                        <h3 class="h5 mb-3">Data Engineering</h3>
+                        <div class="skill-tags">
+                            <span class="chiclet">Apache Spark</span>
+                            <span class="chiclet">SQL</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="skill-category">
+                        <h3 class="h5 mb-3">AI</h3>
+                        <div class="skill-tags">
+                            <span class="chiclet">LangChain</span>
+                            <span class="chiclet">OpenAI API</span>
+                            <span class="chiclet">Hugging Face</span>
                         </div>
                     </div>
                 </div>
@@ -142,13 +169,13 @@
     </section>
 
     <!-- Portfolio Section -->
-    <section id="portfolio" class="text-left portfolio-section" aria-labelledby="portfolio-heading">
-        <h2 id="portfolio-heading" class="p-2 m-0 text-center bg-black fw-bold pt-4 pb-4 border-bottom">Featured Projects</h2>
+    <section id="portfolio" class="text-left portfolio-section py-5" aria-labelledby="portfolio-heading">
+        <h2 id="portfolio-heading" class="text-center mb-5">Featured Projects</h2>
         
         <!-- Seer Weather -->
         <article class="project-container pb-4">
             <div class="d-flex justify-content-center align-items-center align-items-md-center flex-column-reverse flex-md-row-reverse">
-                <div class="col-10 col-md-7 d-flex justify-content-center align-items-left flex-column text-left">
+                <div class="col-md-7 d-flex justify-content-center align-items-left flex-column text-left">
                     <h3 class="fs-2 fw-light ms-3 me-3">Seer Weather</h3>
                     <div class="fs-6 m-3 lh-base">
                         <div class="mb-3">
@@ -181,7 +208,7 @@
                         </a>
                     </div>
                 </div>
-                <div class="col-10 col-md-5 d-flex flex-column justify-content-center align-items-center">
+                <div class="col-md-5 d-flex flex-column justify-content-center align-items-center">
                     <div class="p-4">
                         <img src="static/images/seer-weather-desktop.png" alt="Seer Weather application screenshot" class="w-100 rounded-lg shadow-lg">
                     </div>
@@ -192,7 +219,7 @@
         <!-- Climbing Spot -->
         <article class="project-container pt-2 pb-4">
             <div class="d-flex justify-content-center align-items-center align-items-md-center flex-column-reverse flex-md-row-reverse">
-                <div class="col-10 col-md-7 d-flex justify-content-center align-items-left flex-column text-left">
+                <div class="col-md-7 d-flex justify-content-center align-items-left flex-column text-left">
                     <h3 class="fs-2 fw-light ms-3 me-3">Climbing Spot</h3>
                     <div class="fs-6 m-3 lh-base">
                         <div class="mb-3">
@@ -218,7 +245,7 @@
                         </a>
                     </div>
                 </div>
-                <div class="col-10 col-md-5 d-flex flex-column justify-content-center align-items-center">
+                <div class="col-md-5 d-flex flex-column justify-content-center align-items-center">
                     <div class="p-4">
                         <img src="static/images/climbing-spot-desktop.png" alt="Climbing Spot application screenshot" class="w-100 rounded-lg shadow-lg">
                     </div>
@@ -229,7 +256,7 @@
         <!-- Face Recognition -->
         <article class="project-container pt-2 pb-4">
             <div class="d-flex justify-content-center align-items-center align-items-md-center flex-column-reverse flex-md-row-reverse">
-                <div class="col-10 col-md-7 d-flex justify-content-center align-items-left flex-column text-left">
+                <div class="col-md-7 d-flex justify-content-center align-items-left flex-column text-left">
                     <h3 class="fs-2 fw-light ms-3 me-3">Face Recognition</h3>
                     <div class="fs-6 m-3 lh-base">
                         <div class="mb-3">
@@ -251,7 +278,7 @@
                         </a>
                     </div>
                 </div>
-                <div class="col-10 col-md-5 d-flex flex-column justify-content-center align-items-center">
+                <div class="col-md-5 d-flex flex-column justify-content-center align-items-center">
                     <div class="p-4">
                         <img src="static/images/face-recognition-desktop.png" alt="Face Recognition application screenshot" class="w-100 rounded-lg shadow-lg">
                     </div>
@@ -262,7 +289,7 @@
         <!-- Lift Up Gym -->
         <article class="project-container pt-2 pb-4">
             <div class="d-flex justify-content-center align-items-center align-items-md-center flex-column-reverse flex-md-row-reverse">
-                <div class="col-10 col-md-7 d-flex justify-content-center align-items-left flex-column text-left">
+                <div class="col-md-7 d-flex justify-content-center align-items-left flex-column text-left">
                     <h3 class="fs-2 fw-light ms-3 me-3">Lift Up Gym</h3>
                     <div class="fs-6 m-3 lh-base">
                         <div class="mb-3">
@@ -285,7 +312,7 @@
                         </a>
                     </div>
                 </div>
-                <div class="col-10 col-md-5 d-flex flex-column justify-content-center align-items-center">
+                <div class="col-md-5 d-flex flex-column justify-content-center align-items-center">
                     <div class="p-4">
                         <img src="static/images/lift-up-gym-desktop.png" alt="Lift Up Gym website screenshot" class="w-100 rounded-lg shadow-lg border border-custom-gray">
                     </div>
@@ -296,7 +323,7 @@
         <!-- Spotify Songs -->
         <article class="project-container pt-2 pb-4">
             <div class="d-flex justify-content-center align-items-center align-items-md-center flex-column-reverse flex-md-row-reverse">
-                <div class="col-10 col-md-7 d-flex justify-content-center align-items-left flex-column text-left">
+                <div class="col-md-7 d-flex justify-content-center align-items-left flex-column text-left">
                     <h3 class="fs-2 fw-light ms-3 me-3">Spotify Mix</h3>
                     <div class="fs-6 m-3 lh-base">
                         <div class="mb-3">
@@ -318,93 +345,85 @@
                         </a>
                     </div>
                 </div>
-                <div class="col-10 col-md-5 d-flex flex-column justify-content-center align-items-center">
+                <div class="col-md-5 d-flex flex-column justify-content-center align-items-center">
                     <div class="p-4">
                         <img src="static/images/spotify-songs-desktop.png" alt="Spotify Mix application screenshot" class="w-100 rounded-lg shadow-lg">
                     </div>
                 </div>
             </div>
         </article>
-    </section>
 
-    <!-- Other Projects Section -->
-    <section class="bg-white position-relative" aria-labelledby="other-projects-heading">
-        <h2 id="other-projects-heading" class="p-2 m-0 text-center fw-bold pt-4 pb-4 border-top">Other Projects</h2>
-        
-        <div class="accordion" id="accordionParent" role="tablist" aria-multiselectable="true">
-            <div class="accordion-item bg-white">
-                <h3 class="accordion-header" id="headingOne">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                        <span class="fs-4 fw-light text-center w-100">Artworks from the ARTIC API</span>
-                    </button>
-                </h3>
-                <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionParent">
-                    <div class="accordion-body">
-                        <article class="text-left">
-                            <div class="project-container-small pt-2 pb-4">
-                                <div class="d-flex justify-content-center align-items-center align-items-md-center flex-row-reverse">
-                                    <div class="col-7 d-flex justify-content-center align-items-center flex-column text-center">
-                                        <div class="fs-6 m-3 lh-1">
-                                            <p class="mb-2 mb-md-3">&#x2022; A web app built using <strong>HTML/CSS</strong> and <strong>Bootstrap</strong></p>
-                                            <p class="mb-2 mb-md-3">&#x2022; Displays images pulled from the <strong>Art Institute of Chicago API</strong></p>
-                                        </div>
-                                        <a href="https://jkagawa.github.io/artworks-from-artic-api/" target="_blank" rel="noopener noreferrer" class="button-link">
-                                            <button class="button-style-dark fs-5">View Project</button>
-                                        </a>
-                                    </div>
-                                    <div class="col-5 d-flex flex-column justify-content-center align-items-center">
-                                        <div class="p-4">
-                                            <img src="static/images/artic-api-demo.png" alt="Artworks from ARTIC API screenshot" class="w-100 rounded-lg shadow-lg">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>    
-                        </article>
+        <!-- Pong Game -->
+        <article class="project-container pt-2 pb-4">
+            <div class="d-flex justify-content-center align-items-center align-items-md-center flex-column-reverse flex-md-row-reverse">
+                <div class="col-md-7 d-flex justify-content-center align-items-left flex-column text-left">
+                    <h3 class="fs-2 fw-light ms-3 me-3">Pong Game</h3>
+                    <div class="fs-6 m-3 lh-base">
+                        <div class="mb-3">
+                            <div class="chiclet">JavaScript</div>
+                        </div>
+                        <p class="mt-2 mt-md-3">Game physics written in JavaScript.</p>
+                    </div>
+                    <div class="d-flex flex-column ms-3 me-3">
+                        <a href="https://jkagawa.github.io/pong/" target="_blank" rel="noopener noreferrer" class="button-link mb-1">
+                            <button class="button-style-light fs-6">
+                                <i class="fa-regular fa-eye" aria-hidden="true"></i> Live Demo
+                            </button>
+                        </a>
+                        <a href="https://github.com/jkagawa/pong" target="_blank" rel="noopener noreferrer" class="button-link mb-1">
+                            <button class="button-style-light fs-6">
+                                <i class="fa-solid fa-code" aria-hidden="true"></i> Source Code
+                            </button>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-5 d-flex flex-column justify-content-center align-items-center">
+                    <div class="p-4">
+                        <img src="static/images/pong-demo.png" alt="Pong game screenshot" class="w-100 rounded-lg shadow-lg mobile-image">
                     </div>
                 </div>
             </div>
+        </article>
 
-            <div class="accordion-item">
-                <h3 class="accordion-header" id="headingTwo">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                        <span class="fs-4 fw-light text-center w-100">Pong Game</span>
-                    </button>
-                </h3>
-                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionParent">
-                    <div class="accordion-body">
-                        <article class="text-left">
-                            <div class="project-container-small pt-2 pb-4">
-                                <div class="d-flex justify-content-center align-items-center align-items-md-center flex-row-reverse">
-                                    <div class="col-7 d-flex justify-content-center align-items-center flex-column text-center">
-                                        <div class="fs-6 m-3 lh-1">
-                                            <p class="mb-2 mb-md-3">&#x2022; A web app built using <strong>HTML/CSS</strong></p>
-                                            <p class="mb-2 mb-md-3">&#x2022; Game physics and logic written in <strong>JavaScript</strong></p>
-                                        </div>
-                                        <a href="https://jkagawa.github.io/pong/" target="_blank" rel="noopener noreferrer" class="button-link">
-                                            <button class="button-style-light fs-5">Play Game</button>
-                                        </a>
-                                    </div>
-                                    <div class="col-5 d-flex flex-column justify-content-center align-items-center">
-                                        <div class="p-4">
-                                            <img src="static/images/pong-demo.png" alt="Pong game screenshot" class="w-100 rounded-lg shadow-lg">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>    
-                        </article>
+        <!-- Artworks from the ARTIC API -->
+        <article class="project-container pt-2 pb-4">
+            <div class="d-flex justify-content-center align-items-center align-items-md-center flex-column-reverse flex-md-row-reverse">
+                <div class="col-md-7 d-flex justify-content-center align-items-left flex-column text-left">
+                    <h3 class="fs-2 fw-light ms-3 me-3">Artworks from the ARTIC API</h3>
+                    <div class="fs-6 m-3 lh-base">
+                        <div class="mb-3">
+                            <div class="chiclet">Bootstrap</div>
+                        </div>
+                        <p class="mt-2 mt-md-3">Displays images pulled from the Art Institute of Chicago API.</p>
+                    </div>
+                    <div class="d-flex flex-column ms-3 me-3">
+                        <a href="https://jkagawa.github.io/artworks-from-artic-api/" target="_blank" rel="noopener noreferrer" class="button-link mb-1">
+                            <button class="button-style-light fs-6">
+                                <i class="fa-regular fa-eye" aria-hidden="true"></i> Live Demo
+                            </button>
+                        </a>
+                        <a href="https://github.com/jkagawa/artworks-from-artic-api" target="_blank" rel="noopener noreferrer" class="button-link mb-1">
+                            <button class="button-style-light fs-6">
+                                <i class="fa-solid fa-code" aria-hidden="true"></i> Source Code
+                            </button>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-5 d-flex flex-column justify-content-center align-items-center">
+                    <div class="p-4">
+                        <img src="static/images/artic-api-demo.png" alt="Artworks from ARTIC API screenshot" class="w-100 rounded-lg shadow-lg mobile-image">
                     </div>
                 </div>
             </div>
-        </div>
+        </article>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="text-black bg-white text-left" aria-labelledby="contact-heading">
-        <h2 id="contact-heading" class="p-2 m-0 text-center fw-bold pt-4 pb-4">Get In Touch</h2>
+    <section id="contact" class="text-black bg-white text-left py-5" aria-labelledby="contact-heading">
+        <h2 id="contact-heading" class="text-center mb-5">Get In Touch</h2>
         <div>
             <div class="d-flex justify-content-center align-items-center flex-column col-sm-12">
                 <div class="contact-container pt-4 pb-5 ms-1 me-1">
-                    <h3 class="h2 mb-4">Let's work together</h3>
                     <form id="form" action="https://formspree.io/xzbkzzgg" method="POST" aria-label="Contact form">
                         <div class="mb-3">
                             <label for="text-name" class="form-label">Name</label>
@@ -418,7 +437,7 @@
                             <label for="message" class="form-label">Message</label>
                             <textarea name="message" id="message" class="form-control" rows="6" required aria-required="true" placeholder="Tell me about your project..."></textarea>
                         </div>
-                        <button type="submit" class="btn btn-dark fs-4 w-100">Send Message</button>
+                        <button type="submit" class="btn btn-dark fs-5 w-100">Send Message</button>
                     </form>
                 </div>
             </div>     
