@@ -156,7 +156,7 @@ class PortfolioApp {
   }
 
   scrollToSection(section) {
-    const offSetPortfolio = document.getElementById('portfolio').offsetTop;
+    const offSetPortfolio = document.getElementById('portfolio').offsetTop - document.getElementById('about').offsetTop;
     const sections = {
       'Top': 0,
       'Portfolio': offSetPortfolio,
