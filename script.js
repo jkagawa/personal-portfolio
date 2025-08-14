@@ -8,7 +8,7 @@ class PortfolioApp {
     this.setupEventListeners();
     this.setupIntersectionObserver();
     this.setupSmoothScrolling();
-    // this.handleFormSubmission();
+    this.handleFormSubmission();
     this.setupScrollEffects();
   }
 
