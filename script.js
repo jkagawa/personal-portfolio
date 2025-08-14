@@ -8,7 +8,7 @@ class PortfolioApp {
     this.setupEventListeners();
     this.setupIntersectionObserver();
     this.setupSmoothScrolling();
-    this.handleFormSubmission();
+    // this.handleFormSubmission();
     this.setupScrollEffects();
   }
 
@@ -64,27 +64,8 @@ class PortfolioApp {
   }
 
   async handleFormSubmit(e) {
-    e.preventDefault();
-    
-    // Show loading state
-    const submitBtn = e.target.querySelector('button[type="submit"]');
-    const originalText = submitBtn.value;
-    submitBtn.value = 'Sending...';
-    submitBtn.disabled = true;
-
-    try {
-      // Simulate form submission (replace with actual form handling)
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      
-      localStorage.setItem("message_sent", "true");
-      this.showToast();
-      e.target.reset();
-    } catch (error) {
-      console.error('Form submission error:', error);
-    } finally {
-      submitBtn.value = originalText;
-      submitBtn.disabled = false;
-    }
+    localStorage.setItem("message_sent", "true");
+    this.showToast();
   }
 
   showToast() {
@@ -96,14 +77,13 @@ class PortfolioApp {
     }
   }
 
+  // Hide toast after 30 seconds
   hideToast(toast) {
     setTimeout(() => {
       localStorage.setItem("message_sent", "false");
       toast.style.opacity = "0";
-      setTimeout(() => {
-        toast.style.display = "none";
-      }, 300);
-    }, 7000);
+      toast.style.display = "none";
+    }, 30000);
   }
 
   closeToast() {
