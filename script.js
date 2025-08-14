@@ -18,15 +18,6 @@ class PortfolioApp {
     if (form) {
       form.addEventListener("submit", (e) => this.handleFormSubmit(e));
     }
-
-    // Navigation
-    document.querySelectorAll('[onclick*="scrollTo"]').forEach(link => {
-      link.addEventListener('click', (e) => {
-        e.preventDefault();
-        const target = link.getAttribute('onclick').match(/scrollTo(\w+)/)[1];
-        this.scrollToSection(target);
-      });
-    });
   }
 
   setupIntersectionObserver() {
@@ -76,7 +67,7 @@ class PortfolioApp {
     e.preventDefault();
     
     // Show loading state
-    const submitBtn = e.target.querySelector('input[type="submit"]');
+    const submitBtn = e.target.querySelector('button[type="submit"]');
     const originalText = submitBtn.value;
     submitBtn.value = 'Sending...';
     submitBtn.disabled = true;
@@ -155,21 +146,6 @@ class PortfolioApp {
     });
   }
 
-  scrollToSection(section) {
-    const offSetPortfolio = document.getElementById('portfolio').offsetTop - document.getElementById('about').offsetTop;
-    const sections = {
-      'Top': 0,
-      'Portfolio': offSetPortfolio,
-      'Bottom': document.body.scrollHeight
-    };
-
-    const targetY = sections[section] || 0;
-    window.scrollTo({
-      top: targetY,
-      behavior: 'smooth'
-    });
-  }
-
   // Utility methods
   debounce(func, wait) {
     let timeout;
@@ -202,10 +178,17 @@ document.addEventListener('DOMContentLoaded', () => {
   new PortfolioApp();
 });
 
-// Global functions for backward compatibility
 function scrollToTop() {
   window.scrollTo({
     top: 0,
+    behavior: 'smooth'
+  });
+}
+
+function scrollToPortfolio() {
+  const offSetPortfolio = document.getElementById('portfolio').offsetTop - document.getElementById('about').offsetTop;
+  window.scrollTo({
+    top: offSetPortfolio,
     behavior: 'smooth'
   });
 }
@@ -223,17 +206,6 @@ function closeToast() {
     toast.style.display = "none";
     localStorage.setItem("message_sent", "false");
   }
-}
-
-// Scroll to top
-function scrollToTop() {
-    document.body.scrollTop = 0; // For Safari
-    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-}
-
-// Scroll to bottom
-function scrollToBottom() {
-    window.scrollTo(0, document.body.scrollHeight);
 }
 
 // Up Icon
