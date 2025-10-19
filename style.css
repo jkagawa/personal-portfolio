@@ -101,12 +101,7 @@ a {
   backdrop-filter: blur(20px);
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 16px;
-  box-shadow:
-      1px 1px 1px hsl(0deg 0% 83% / 0.075),
-      2px 2px 2px hsl(0deg 0% 83% / 0.075),
-      4px 4px 4px hsl(0deg 0% 83% / 0.075),
-      8px 8px 8px hsl(0deg 0% 83% / 0.075),
-      12px 12px 16px hsl(0deg 0% 83% / 0.075);
+  box-shadow: 10px 10px 5px #00000057;
   padding: 2rem;
   max-width: 800px;
   margin: 0 auto;
