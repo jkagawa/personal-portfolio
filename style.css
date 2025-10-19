@@ -107,19 +107,12 @@ a {
   margin: 0 auto;
 }
 
-/* Enhanced profile image */
 .profile-image-containter {
-  overflow: hidden;
+  width: 150px; 
+  height: 150px; 
+  overflow: hidden; 
+  margin: -35px -25px; 
   border-radius: 50%;
-  display: block;
-  border: 3px solid rgba(255, 255, 255, 0.8);
-  transition: var(--transition);
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-}
-
-.profile-image-containter:hover {
-  transform: scale(1.02);
-  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.15);
 }
 
 .profile-image {
@@ -128,6 +121,7 @@ a {
   object-fit: cover;
   transform: scale(1);
   margin: -10px 0 0 -16px;
+  filter: brightness(1.2);
 }
 
 /* Modern project cards */
@@ -298,12 +292,6 @@ body {
 .other-project-header, .accordion, #contact, footer {
     z-index: 20;
     position: relative;
-}
-
-.profile-image-containter {
-    overflow: hidden;
-    border-radius: 10px;
-    display: none;
 }
 
 .contact-container {
