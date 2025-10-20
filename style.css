@@ -179,7 +179,25 @@ a {
 .chiclet:hover {
   background: #858484;
   color: white;
-  transform: translateY(-1px);
+  transform: translateY(-3px);
+}
+
+.items-slide .chiclet {
+    display: inline-block;
+    border: 1px solid #2d2d2d;
+    border-radius: 6px;
+    background-color: #2d2d2d;
+    color: white;
+}
+
+.project-container .chiclet {
+    display: inline-block;
+    border: 1px solid #2d2d2d;
+    padding: 5px 8px;
+    margin: 4px 0px;
+    border-radius: 6px;
+    background-color: #2d2d2d;
+    color: white;
 }
 
 /* Enhanced contact form */
@@ -399,16 +417,6 @@ button:not(.navbar-toggler, .button-style-dark, .button-style-light, .nav-link:h
     padding-left: 0.5rem !important;
 }
 
-.project-container .chiclet {
-    display: inline-block;
-    border: 1px solid #2d2d2d;
-    padding: 5px 8px;
-    margin: 4px 0px;
-    border-radius: 6px;
-    background-color: #2d2d2d;
-    color: white;
-}
-
 .accordion-collapse {
     --bs-text-opacity: 1;
     color: rgba(var(--bs-white-rgb),var(--bs-text-opacity))!important;
@@ -596,6 +604,36 @@ p {
     box-shadow: none;
     background-color: #e5e5e5;
     color: #1f2937;
+}
+
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.items-slide-container {
+  overflow: hidden; 
+  padding: 10px 0; 
+  background: #111827;
+  white-space: nowrap;
+  margin: 20px 0;
+}
+
+.items-slide-container:hover .items-slide {
+  animation-play-state: paused;
+}
+
+.items-slide {
+  display: inline-block;
+  animation: 45s slide infinite linear;
+}
+
+.skill-item {
+  margin: 20px 20px;
 }
 
 /* small screen */
