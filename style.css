@@ -121,7 +121,7 @@ a {
   object-fit: cover;
   transform: scale(1);
   margin: 0 0 0 -16px;
-  filter: brightness(1.2);
+  filter: brightness(1.1);
 }
 
 /* Modern project cards */
@@ -648,6 +648,7 @@ p {
   }
   #about {
     padding: 1rem 0.5rem !important;
+    min-height: 80vh;
   }
   .profile-header-container, .profile-text-container {
     margin: 1rem 1rem !important;
