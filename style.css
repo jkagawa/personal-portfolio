@@ -617,10 +617,10 @@ p {
 
 .items-slide-container {
   overflow: hidden; 
-  padding: 10px 0; 
+  padding: 5px 0; 
   background: #111827;
   white-space: nowrap;
-  margin: 20px 0;
+  margin: 0;
 }
 
 .items-slide-container:hover .items-slide {
@@ -629,7 +629,7 @@ p {
 
 .items-slide {
   display: inline-block;
-  animation: 45s slide infinite linear;
+  animation: 23s slide infinite linear;
 }
 
 .skill-item {
