@@ -14,9 +14,6 @@
   --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1);
   --border-radius: 8px;
   --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-
-    
-
 }
 
 /* Modern body styling */
@@ -131,18 +128,19 @@ a {
   max-width: 1200px;
   margin: auto;
   padding: 2rem 0;
-  background: white;
+  /* background: white; */
   border-radius: var(--border-radius);
   box-shadow: var(--shadow-sm);
   margin: 2rem auto;
   overflow: hidden;
   transition: var(--transition);
-  border: 1px solid gray;
+  border: 1px solid lightgray;
+  box-shadow: var(--shadow-lg);
 }
 
 .project-container:hover {
   transform: translateY(-4px);
-  box-shadow: var(--shadow-lg);
+  box-shadow: 10px 10px 5px #00000057;
 }
 
 .project-container-small {
@@ -310,7 +308,7 @@ body {
 #background-section, #portfolio {
     z-index: 10;
     position: relative;
-    padding: 2rem 0.5rem;
+    padding: 2rem 1rem;
 }
 
 .other-project-header, .accordion, #contact, footer {
