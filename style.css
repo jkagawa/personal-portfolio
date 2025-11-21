@@ -152,12 +152,12 @@ a {
 
 .project-container .chiclet {
     display: inline-block;
-    border: 1px solid #2d2d2d;
+    border: 1px solid lightgray;
     padding: 5px 8px;
     margin: 4px 0px;
     border-radius: 6px;
-    background-color: #2d2d2d;
-    color: white;
+    background-color: lightgray;
+    color: #191919;
 }
 
 .project-card {
@@ -213,9 +213,9 @@ a {
 
 .items-slide .chiclet {
     display: inline-block;
-    border: 1px solid #2d2d2d;
+    border: 1px solid gray;
     border-radius: 6px;
-    background-color: #2d2d2d;
+    background-color: transparent;
     color: white;
 }
 
@@ -310,6 +310,7 @@ body {
 #background-section, #portfolio {
     z-index: 10;
     position: relative;
+    padding: 2rem 0.5rem;
 }
 
 .other-project-header, .accordion, #contact, footer {
