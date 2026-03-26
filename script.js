@@ -92,10 +92,11 @@ class PortfolioApp {
     let ticking = false;
 
     const updateScrollEffects = () => {
-      const upIcon = document.getElementById('UpIcon');
-      if (upIcon) {
-        upIcon.style.display = window.pageYOffset > 0 ? 'block' : 'none';
-      }
+      const show = window.pageYOffset > 0;
+      ['UpIcon', 'UpIconMobile'].forEach(id => {
+        const el = document.getElementById(id);
+        if (el) el.style.display = show ? 'block' : 'none';
+      });
 
       const navbar = document.querySelector('.navbar');
       if (navbar) {
@@ -233,10 +234,11 @@ function closeToast() {
   }
 }
 
-// Up Icon visibility
-const upIcon = document.getElementById('UpIcon');
+// Up icon visibility (desktop + mobile)
 addEventListener("scroll", () => {
-  if (upIcon) {
-    upIcon.style.display = window.pageYOffset > 0 ? 'block' : 'none';
-  }
+  const show = window.pageYOffset > 0;
+  ['UpIcon', 'UpIconMobile'].forEach(id => {
+    const el = document.getElementById(id);
+    if (el) el.style.display = show ? 'block' : 'none';
+  });
 });

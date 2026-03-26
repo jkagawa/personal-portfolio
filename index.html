@@ -36,9 +36,9 @@
             <!-- Brand -->
             <a class="navbar-brand nav-brand" onclick="scrollToTop()" href="#about" aria-label="Back to top">JK</a>
 
-            <!-- Right side: up icon + toggler (always visible) -->
-            <div class="d-flex align-items-center gap-1">
-                <span id="UpIcon" aria-label="Scroll to top">
+            <!-- Mobile: scroll-to-top + hamburger (hidden on desktop) -->
+            <div class="d-flex d-lg-none align-items-center gap-1">
+                <span id="UpIconMobile" aria-label="Scroll to top">
                     <button onclick="scrollToTop()" class="nav-link text-light" aria-label="Scroll to top">
                         <i class="fa-solid fa-chevron-up" aria-hidden="true"></i>
                     </button>
@@ -51,6 +51,11 @@
             <!-- Collapsible links -->
             <div class="collapse navbar-collapse" id="navMenu">
                 <ul class="navbar-nav ms-auto align-items-center align-items-lg-center flex-lg-row">
+                    <li id="UpIcon" class="nav-item" aria-label="Scroll to top">
+                        <button onclick="scrollToTop()" class="nav-link text-light" aria-label="Scroll to top">
+                            <i class="fa-solid fa-chevron-up" aria-hidden="true"></i>
+                        </button>
+                    </li>
                     <li class="nav-item">
                         <button onclick="scrollToPortfolio(); collapseNav()" class="nav-link text-light">Portfolio</button>
                     </li>
