@@ -22,7 +22,7 @@
     <script src="https://kit.fontawesome.com/3ef1af0600.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/x-icon" href="static/images/letter-j.png">
     <title>Joshua Kagawa | Full Stack Developer</title>
@@ -30,24 +30,39 @@
 <body>
 
     <!-- Navigation -->
-    <nav class="navbar flex-wrap fixed-top p-0" role="navigation" aria-label="Main navigation">
-        <div class="container mw-100">
-            <ul class="navbar-nav flex-row mb-0 justify-content-end align-items-center w-100">
-                <li id="UpIcon" aria-label="Scroll to top">
-                    <button onclick="scrollToTop()" class="nav-link text-light fs-6" aria-label="Scroll to top">
+    <nav class="navbar navbar-expand-lg fixed-top p-0" role="navigation" aria-label="Main navigation">
+        <div class="container-fluid px-3 px-md-4">
+
+            <!-- Brand -->
+            <a class="navbar-brand nav-brand" onclick="scrollToTop()" href="#about" aria-label="Back to top">JK</a>
+
+            <!-- Right side: up icon + toggler (always visible) -->
+            <div class="d-flex align-items-center gap-1">
+                <span id="UpIcon" aria-label="Scroll to top">
+                    <button onclick="scrollToTop()" class="nav-link text-light" aria-label="Scroll to top">
                         <i class="fa-solid fa-chevron-up" aria-hidden="true"></i>
                     </button>
-                </li>
-                <li>
-                    <button onclick="scrollToPortfolio()" class="nav-link text-light fs-6">Portfolio</button>
-                </li>
-                <li>
-                    <button onclick="scrollToBottom()" class="nav-link text-light fs-6">Contact Me</button>
-                </li>
-                <li>
-                    <a href="static/documents/Joshua_Kagawa_Resume.pdf" target="_blank" class="nav-link text-light fs-6">Résumé <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                </li>
-            </ul>
+                </span>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+
+            <!-- Collapsible links -->
+            <div class="collapse navbar-collapse" id="navMenu">
+                <ul class="navbar-nav ms-auto align-items-center align-items-lg-center flex-lg-row">
+                    <li class="nav-item">
+                        <button onclick="scrollToPortfolio(); collapseNav()" class="nav-link text-light">Portfolio</button>
+                    </li>
+                    <li class="nav-item">
+                        <button onclick="scrollToBottom(); collapseNav()" class="nav-link text-light">Contact Me</button>
+                    </li>
+                    <li class="nav-item">
+                        <a href="static/documents/Joshua_Kagawa_Resume.pdf" target="_blank" class="nav-link text-light nav-resume">Résumé <i class="fa-solid fa-arrow-up-right-from-square fa-xs" aria-hidden="true"></i></a>
+                    </li>
+                </ul>
+            </div>
+
         </div>
     </nav>
 
@@ -62,116 +77,108 @@
     </div>
 
     <!-- Hero Section -->
-    <section id="about" class="text-black text-left w-100 p-3 d-flex" aria-labelledby="hero-heading">
+    <section id="about" class="text-left w-100 p-3 d-flex" aria-labelledby="hero-heading">
         <div class="banner-container d-flex justify-content-center align-items-center m-0 flex-column-reverse flex-lg-row w-100">
             <div class="d-flex justify-content-center align-items-center flex-column flex-lg-row">
                 <div class="banner-text-container">
                     <div class="d-flex align-items-start align-items-md-center flex-column flex-md-row m-auto profile-header-container my-4 mx-3">
                         <div>
-                            <h1 id="hero-heading" class="fs-1 fs-sm-2 mb-1">Joshua Kagawa</h1>
-                            <p id="hero-heading2" class="fs-1 lh-1 mb-0">Full Stack Developer</p>
+                            <h1 id="hero-heading" class="mb-1">Joshua Kagawa</h1>
+                            <p id="hero-heading2" class="lh-1 mb-0">
+                                <span id="typed-text"></span><span class="typed-cursor" aria-hidden="true"></span>
+                            </p>
                         </div>
                     </div>
                     <div class="profile-text-container my-4 mx-3 fs-6">
-                        <p>I am an experienced full stack developer with expertise in diverse languages and frameworks. 
-                        I specialize in JavaScript, Python, React, and Flask, building full-fledged applications from concept to production. 
+                        <p>I am an experienced full stack developer with expertise in diverse languages and frameworks.
+                        I specialize in JavaScript, Python, React, and Flask, building full-fledged applications from concept to production.
                         Passionate about creating efficient, scalable solutions that solve real-world problems.</p>
                     </div>
                 </div>
                 <div class="profile-image-containter">
-                    <img src="static/images/profile_photo.jpg" alt="Joshua Kagawa - Full Stack Developer" class="profile-image" draggable="false">
+                    <div class="profile-image-inner">
+                        <img src="static/images/profile_photo.jpg" alt="Joshua Kagawa - Full Stack Developer" class="profile-image" draggable="false">
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Skills Section -->
-    <section id="skills" class="bg-light" aria-labelledby="skills-heading">
+    <section id="skills" aria-labelledby="skills-heading">
         <h2 id="skills-heading" class="text-center">Tech Stack</h2>
-        <div style="background: #111827; padding: 1px 0;">
-            <div class="items-slide-container">
-                <div class="items-slide">
-                    <span class="h5 mb-3 skill-item">Frontend</span>
-                    <span class="chiclet skill-item">JavaScript</span>
-                    <span class="chiclet skill-item">React</span>
-                    <span class="chiclet skill-item">TypeScript</span>
-                    <span class="chiclet skill-item">Redux</span>
-                    <span class="chiclet skill-item">Jinja</span>
-                    <span class="chiclet skill-item">Tailwind CSS</span>
-                    <span class="chiclet skill-item">Bootstrap</span>
+        <div class="skills-grid">
 
-                    <span class="h5 mb-3 skill-item">Backend</span>
-                    <span class="chiclet skill-item">Python</span>
-                    <span class="chiclet skill-item">PostgreSQL</span>
-                    <span class="chiclet skill-item">MySQL</span>
-                    <span class="chiclet skill-item">Flask</span>
-                    <span class="chiclet skill-item">SQLAlchemy</span>
-                    <span class="chiclet skill-item">Regex</span>
-                    <span class="chiclet skill-item">Node.js</span>
-                    <span class="chiclet skill-item">REST APIs</span>
-                    <span class="chiclet skill-item">MongoDB</span>
+            <div class="skill-card">
+                <div class="skill-card-header">
+                    <i class="fa-solid fa-display" aria-hidden="true"></i>
+                    <span>Frontend</span>
                 </div>
-                <div class="items-slide">
-                    <span class="h5 mb-3 skill-item">Frontend</span>
-                    <span class="chiclet skill-item">JavaScript</span>
-                    <span class="chiclet skill-item">React</span>
-                    <span class="chiclet skill-item">TypeScript</span>
-                    <span class="chiclet skill-item">Redux</span>
-                    <span class="chiclet skill-item">Jinja</span>
-                    <span class="chiclet skill-item">Tailwind CSS</span>
-                    <span class="chiclet skill-item">Bootstrap</span>
-
-                    <span class="h5 mb-3 skill-item">Backend</span>
-                    <span class="chiclet skill-item">Python</span>
-                    <span class="chiclet skill-item">PostgreSQL</span>
-                    <span class="chiclet skill-item">MySQL</span>
-                    <span class="chiclet skill-item">Flask</span>
-                    <span class="chiclet skill-item">SQLAlchemy</span>
-                    <span class="chiclet skill-item">Regex</span>
-                    <span class="chiclet skill-item">Node.js</span>
-                    <span class="chiclet skill-item">REST APIs</span>
-                    <span class="chiclet skill-item">MongoDB</span>
+                <div class="skill-tags">
+                    <span class="skill-tag">JavaScript</span>
+                    <span class="skill-tag">React</span>
+                    <span class="skill-tag">TypeScript</span>
+                    <span class="skill-tag">Redux</span>
+                    <span class="skill-tag">Jinja</span>
+                    <span class="skill-tag">Tailwind CSS</span>
+                    <span class="skill-tag">Bootstrap</span>
                 </div>
             </div>
 
-            <div class="items-slide-container">
-                <div class="items-slide">
-                    <span class="h5 mb-3 skill-item">Dev Ops</span>
-                    <span class="chiclet skill-item">Git</span>
-                    <span class="chiclet skill-item">CI/CD</span>
-                    <span class="chiclet skill-item">Bash</span>
-                    <span class="chiclet skill-item">PowerShell</span>
-                    <span class="chiclet skill-item">AWS</span>
-                    <span class="chiclet skill-item">Docker</span>
-                    <span class="chiclet skill-item">Kubernetes</span>
- 
-                    <span class="h5 mb-3 skill-item">Data Engineering</span>
-                    <span class="chiclet skill-item">Apache Spark</span>
-                    <span class="chiclet skill-item">SQL</span>
-
-                    <span class="h5 mb-3 skill-item">AI</span>
-                    <span class="chiclet skill-item">LangChain</span>
-                    <span class="chiclet skill-item">OpenAI API</span>
-                    <span class="chiclet skill-item">Hugging Face</span>
+            <div class="skill-card">
+                <div class="skill-card-header">
+                    <i class="fa-solid fa-server" aria-hidden="true"></i>
+                    <span>Backend</span>
                 </div>
-                <div class="items-slide">
-                    <span class="h5 mb-3 skill-item">Dev Ops</span>
-                    <span class="chiclet skill-item">Git</span>
-                    <span class="chiclet skill-item">CI/CD</span>
-                    <span class="chiclet skill-item">Bash</span>
-                    <span class="chiclet skill-item">PowerShell</span>
-                    <span class="chiclet skill-item">AWS</span>
-                    <span class="chiclet skill-item">Docker</span>
-                    <span class="chiclet skill-item">Kubernetes</span>
- 
-                    <span class="h5 mb-3 skill-item">Data Engineering</span>
-                    <span class="chiclet skill-item">Apache Spark</span>
-                    <span class="chiclet skill-item">SQL</span>
+                <div class="skill-tags">
+                    <span class="skill-tag">Python</span>
+                    <span class="skill-tag">Flask</span>
+                    <span class="skill-tag">Node.js</span>
+                    <span class="skill-tag">REST APIs</span>
+                    <span class="skill-tag">SQLAlchemy</span>
+                    <span class="skill-tag">PostgreSQL</span>
+                    <span class="skill-tag">MySQL</span>
+                    <span class="skill-tag">MongoDB</span>
+                    <span class="skill-tag">Regex</span>
+                </div>
+            </div>
 
-                    <span class="h5 mb-3 skill-item">AI</span>
-                    <span class="chiclet skill-item">LangChain</span>
-                    <span class="chiclet skill-item">OpenAI API</span>
-                    <span class="chiclet skill-item">Hugging Face</span>
+            <div class="skill-card">
+                <div class="skill-card-header">
+                    <i class="fa-solid fa-gears" aria-hidden="true"></i>
+                    <span>DevOps</span>
+                </div>
+                <div class="skill-tags">
+                    <span class="skill-tag">Git</span>
+                    <span class="skill-tag">CI/CD</span>
+                    <span class="skill-tag">AWS</span>
+                    <span class="skill-tag">Docker</span>
+                    <span class="skill-tag">Kubernetes</span>
+                    <span class="skill-tag">Bash</span>
+                    <span class="skill-tag">PowerShell</span>
+                </div>
+            </div>
+
+            <div class="skill-card">
+                <div class="skill-card-header">
+                    <i class="fa-solid fa-database" aria-hidden="true"></i>
+                    <span>Data Engineering</span>
+                </div>
+                <div class="skill-tags">
+                    <span class="skill-tag">Apache Spark</span>
+                    <span class="skill-tag">SQL</span>
+                </div>
+            </div>
+
+            <div class="skill-card">
+                <div class="skill-card-header">
+                    <i class="fa-solid fa-brain" aria-hidden="true"></i>
+                    <span>AI</span>
+                </div>
+                <div class="skill-tags">
+                    <span class="skill-tag">LangChain</span>
+                    <span class="skill-tag">OpenAI API</span>
+                    <span class="skill-tag">Hugging Face</span>
                 </div>
             </div>
 
@@ -179,14 +186,14 @@
     </section>
 
     <!-- Portfolio Section -->
-    <section id="portfolio" class="text-left bg-light portfolio-section" aria-labelledby="portfolio-heading">
+    <section id="portfolio" class="text-left portfolio-section" aria-labelledby="portfolio-heading">
         <h2 id="portfolio-heading" class="text-center">Featured Projects</h2>
-        
+
         <!-- Climbing Spot -->
         <article class="project-container pt-2 pb-4">
             <div class="d-flex justify-content-center align-items-center align-items-md-center flex-column-reverse flex-md-row-reverse">
                 <div class="col-md-7 d-flex justify-content-center align-items-left flex-column text-left">
-                    <h3 class="fs-2 fw-light ms-3 me-3 text-dark">Climbing Spot</h3>
+                    <h3 class="fs-2 fw-light ms-3 me-3">Climbing Spot</h3>
                     <div class="fs-6 m-3 lh-base">
                         <div class="mb-3">
                             <div class="chiclet">Flask</div>
@@ -196,7 +203,7 @@
                             <div class="chiclet">Jinja</div>
                             <div class="chiclet">Google Maps API</div>
                         </div>
-                        <p class="mt-2 mt-md-3 text-dark">A web application for discovering and managing climbing locations. Features include user authentication via Google OAuth, location management with Google Maps integration, and a responsive design. Users can add, edit, and track their favorite climbing spots.</p>
+                        <p class="mt-2 mt-md-3">A web application for discovering and managing climbing locations. Features include user authentication via Google OAuth, location management with Google Maps integration, and a responsive design. Users can add, edit, and track their favorite climbing spots.</p>
                     </div>
                     <div class="d-flex flex-column ms-3 me-3">
                         <a href="https://climbingspot.pythonanywhere.com/" target="_blank" rel="noopener noreferrer" class="button-link mb-1">
@@ -223,7 +230,7 @@
         <article class="project-container pb-4">
             <div class="d-flex justify-content-center align-items-center align-items-md-center flex-column-reverse flex-md-row-reverse">
                 <div class="col-md-7 d-flex justify-content-center align-items-left flex-column text-left">
-                    <h3 class="fs-2 fw-light ms-3 me-3 text-dark">Seer Weather</h3>
+                    <h3 class="fs-2 fw-light ms-3 me-3">Seer Weather</h3>
                     <div class="fs-6 m-3 lh-base">
                         <div class="mb-3">
                             <div class="chiclet">React</div>
@@ -235,7 +242,7 @@
                             <div class="chiclet">PostgreSQL</div>
                             <div class="chiclet">API</div>
                         </div>
-                        <p class="mt-2 mt-md-3 text-dark">A comprehensive weather application that provides real-time and forecast weather data using the Open-Meteo API. Features user authentication, saved locations, and dynamic background images based on current weather conditions. Built with React frontend and Flask backend with PostgreSQL database.</p>
+                        <p class="mt-2 mt-md-3">A comprehensive weather application that provides real-time and forecast weather data using the Open-Meteo API. Features user authentication, saved locations, and dynamic background images based on current weather conditions. Built with React frontend and Flask backend with PostgreSQL database.</p>
                     </div>
                     <div class="d-flex flex-column ms-3 me-3">
                         <a href="https://seer-weather.netlify.app/" target="_blank" rel="noopener noreferrer" class="button-link mb-1">
@@ -267,13 +274,13 @@
         <article class="project-container pt-2 pb-4">
             <div class="d-flex justify-content-center align-items-center align-items-md-center flex-column-reverse flex-md-row-reverse">
                 <div class="col-md-7 d-flex justify-content-center align-items-left flex-column text-left">
-                    <h3 class="fs-2 fw-light ms-3 me-3 text-dark">Face Recognition</h3>
+                    <h3 class="fs-2 fw-light ms-3 me-3">Face Recognition</h3>
                     <div class="fs-6 m-3 lh-base">
                         <div class="mb-3">
                             <div class="chiclet">React</div>
                             <div class="chiclet">Clarifai API</div>
                         </div>
-                        <p class="mt-2 mt-md-3 text-dark">An AI-powered web application that uses machine learning to detect and recognize faces in uploaded images. Built with React frontend and integrated with Clarifai's face recognition API for real-time image analysis.</p>
+                        <p class="mt-2 mt-md-3">An AI-powered web application that uses machine learning to detect and recognize faces in uploaded images. Built with React frontend and integrated with Clarifai's face recognition API for real-time image analysis.</p>
                     </div>
                     <div class="d-flex flex-column ms-3 me-3">
                         <a href="https://face-recognition-site.netlify.app/" target="_blank" rel="noopener noreferrer" class="button-link mb-1">
@@ -300,14 +307,14 @@
         <article class="project-container pt-2 pb-4">
             <div class="d-flex justify-content-center align-items-center align-items-md-center flex-column-reverse flex-md-row-reverse">
                 <div class="col-md-7 d-flex justify-content-center align-items-left flex-column text-left">
-                    <h3 class="fs-2 fw-light ms-3 me-3 text-dark">Lift Up Gym</h3>
+                    <h3 class="fs-2 fw-light ms-3 me-3">Lift Up Gym</h3>
                     <div class="fs-6 m-3 lh-base">
                         <div class="mb-3">
                             <div class="chiclet">HTML/CSS</div>
                             <div class="chiclet">JavaScript</div>
                             <div class="chiclet">Bootstrap</div>
                         </div>
-                        <p class="mt-2 mt-md-3 text-dark">A responsive website showcasing a modern gym's amenities and culture. Features include embedded Google Maps, responsive image galleries, interactive login simulation, and toast notifications. Demonstrates strong frontend development skills with modern web standards.</p>
+                        <p class="mt-2 mt-md-3">A responsive website showcasing a modern gym's amenities and culture. Features include embedded Google Maps, responsive image galleries, interactive login simulation, and toast notifications. Demonstrates strong frontend development skills with modern web standards.</p>
                     </div>
                     <div class="d-flex flex-column ms-3 me-3">
                         <a href="https://jkagawa.github.io/gym-website/" target="_blank" rel="noopener noreferrer" class="button-link mb-1">
@@ -324,7 +331,7 @@
                 </div>
                 <div class="col-md-5 d-flex flex-column justify-content-center align-items-center">
                     <div class="p-4">
-                        <img src="static/images/lift-up-gym-desktop.png" alt="Lift Up Gym website screenshot" class="w-100 rounded-lg shadow-lg border border-custom-gray">
+                        <img src="static/images/lift-up-gym-desktop.png" alt="Lift Up Gym website screenshot" class="w-100 rounded-lg shadow-lg border-custom-gray">
                     </div>
                 </div>
             </div>
@@ -334,13 +341,13 @@
         <article class="project-container pt-2 pb-4">
             <div class="d-flex justify-content-center align-items-center align-items-md-center flex-column-reverse flex-md-row-reverse">
                 <div class="col-md-7 d-flex justify-content-center align-items-left flex-column text-left">
-                    <h3 class="fs-2 fw-light ms-3 me-3 text-dark">Spotify Mix</h3>
+                    <h3 class="fs-2 fw-light ms-3 me-3">Spotify Mix</h3>
                     <div class="fs-6 m-3 lh-base">
                         <div class="mb-3">
                             <div class="chiclet">React</div>
                             <div class="chiclet">Spotify API</div>
                         </div>
-                        <p class="mt-2 mt-md-3 text-dark">A curated music player application that displays and plays a selection of Spotify songs. Features clickable album artwork for direct playback and demonstrates integration with Spotify's Web API for music streaming capabilities.</p>
+                        <p class="mt-2 mt-md-3">A curated music player application that displays and plays a selection of Spotify songs. Features clickable album artwork for direct playback and demonstrates integration with Spotify's Web API for music streaming capabilities.</p>
                     </div>
                     <div class="d-flex flex-column ms-3 me-3">
                         <a href="https://my-spotify-songs.netlify.app/" target="_blank" rel="noopener noreferrer" class="button-link mb-1">
@@ -367,12 +374,12 @@
         <article class="project-container pt-2 pb-4">
             <div class="d-flex justify-content-center align-items-center align-items-md-center flex-column-reverse flex-md-row-reverse">
                 <div class="col-md-7 d-flex justify-content-center align-items-left flex-column text-left">
-                    <h3 class="fs-2 fw-light ms-3 me-3 text-dark">Pong Game</h3>
+                    <h3 class="fs-2 fw-light ms-3 me-3">Pong Game</h3>
                     <div class="fs-6 m-3 lh-base">
                         <div class="mb-3">
                             <div class="chiclet">JavaScript</div>
                         </div>
-                        <p class="mt-2 mt-md-3 text-dark">Game physics written in JavaScript.</p>
+                        <p class="mt-2 mt-md-3">Game physics written in JavaScript.</p>
                     </div>
                     <div class="d-flex flex-column ms-3 me-3">
                         <a href="https://jkagawa.github.io/pong/" target="_blank" rel="noopener noreferrer" class="button-link mb-1">
@@ -399,12 +406,12 @@
         <article class="project-container pt-2 pb-4">
             <div class="d-flex justify-content-center align-items-center align-items-md-center flex-column-reverse flex-md-row-reverse">
                 <div class="col-md-7 d-flex justify-content-center align-items-left flex-column text-left">
-                    <h3 class="fs-2 fw-light ms-3 me-3 text-dark">Artworks from the ARTIC API</h3>
+                    <h3 class="fs-2 fw-light ms-3 me-3">Artworks from the ARTIC API</h3>
                     <div class="fs-6 m-3 lh-base">
                         <div class="mb-3">
                             <div class="chiclet">Bootstrap</div>
                         </div>
-                        <p class="mt-2 mt-md-3 text-dark">Displays images pulled from the Art Institute of Chicago API.</p>
+                        <p class="mt-2 mt-md-3">Displays images pulled from the Art Institute of Chicago API.</p>
                     </div>
                     <div class="d-flex flex-column ms-3 me-3">
                         <a href="https://jkagawa.github.io/artworks-from-artic-api/" target="_blank" rel="noopener noreferrer" class="button-link mb-1">
@@ -429,8 +436,9 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="text-black bg-light text-left" aria-labelledby="contact-heading">
+    <section id="contact" class="text-left" aria-labelledby="contact-heading">
         <h2 id="contact-heading" class="text-center">Get In Touch</h2>
+        <p class="contact-intro">Have a project in mind or want to talk tech? I'd love to hear from you.</p>
         <div>
             <div class="d-flex justify-content-center align-items-center flex-column col-sm-12">
                 <div class="contact-container pt-4 pb-5 ms-1 me-1">
@@ -450,22 +458,28 @@
                         <button type="submit" class="btn btn-dark fs-5 w-100">Send Message</button>
                     </form>
                 </div>
-            </div>     
+            </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-light" role="contentinfo">
-        <div class="text-dark text-center p-3 d-flex justify-content-center">
-            <a href="https://github.com/jkagawa" class="social-links text-black fs-3 m-2" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile">
-                <i class="fa-brands fa-github" aria-hidden="true"></i>
-            </a>
-            <a href="https://www.linkedin.com/in/joshuakagawa" class="social-links text-black fs-3 m-2" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile">
-                <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
-            </a>
-        </div>
-        <div class="text-center text-muted pb-3">
-            <small>&copy; 2025 Joshua Kagawa. All rights reserved.</small>
+    <footer role="contentinfo">
+        <div class="footer-inner">
+            <div>
+                <span class="footer-name">Joshua Kagawa</span>
+                <span class="footer-tagline">Full Stack Developer</span>
+            </div>
+            <div>
+                <a href="https://github.com/jkagawa" class="social-links" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile">
+                    <i class="fa-brands fa-github" aria-hidden="true"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/joshuakagawa" class="social-links" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile">
+                    <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+                </a>
+            </div>
+            <div class="text-center">
+                <small class="text-muted">&copy; 2025 Joshua Kagawa. All rights reserved.</small>
+            </div>
         </div>
     </footer>
 

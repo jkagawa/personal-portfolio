@@ -10,10 +10,10 @@ class PortfolioApp {
     this.setupSmoothScrolling();
     this.handleFormSubmission();
     this.setupScrollEffects();
+    this.setupTypedEffect();
   }
 
   setupEventListeners() {
-    // Form submission
     const form = document.getElementById("form");
     if (form) {
       form.addEventListener("submit", (e) => this.handleFormSubmit(e));
@@ -22,35 +22,38 @@ class PortfolioApp {
 
   setupIntersectionObserver() {
     const observerOptions = {
-      threshold: 0.1,
-      rootMargin: '0px 0px -50px 0px'
+      threshold: 0.08,
+      rootMargin: '0px 0px -40px 0px'
     };
 
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
-          entry.target.classList.add('fade-in-up');
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
         }
       });
     }, observerOptions);
 
-    // Observe all project containers and sections
-    document.querySelectorAll('.project-container, .portfolio-section, .contact-container').forEach(el => {
+    // Stagger project containers on entry
+    document.querySelectorAll('.project-container').forEach((el, index) => {
+      el.style.transitionDelay = `${index * 80}ms`;
+      observer.observe(el);
+    });
+
+    // Contact container without stagger delay
+    document.querySelectorAll('.contact-container').forEach(el => {
       observer.observe(el);
     });
   }
 
   setupSmoothScrolling() {
-    // Smooth scroll for all internal links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', (e) => {
         e.preventDefault();
         const target = document.querySelector(anchor.getAttribute('href'));
         if (target) {
-          target.scrollIntoView({
-            behavior: 'smooth',
-            block: 'start'
-          });
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
       });
     });
@@ -63,7 +66,7 @@ class PortfolioApp {
     }
   }
 
-  async handleFormSubmit(e) {
+  async handleFormSubmit(_e) {
     localStorage.setItem("message_sent", "true");
     this.showToast();
   }
@@ -77,7 +80,6 @@ class PortfolioApp {
     }
   }
 
-  // Hide toast after 30 seconds
   hideToast(toast) {
     setTimeout(() => {
       localStorage.setItem("message_sent", "false");
@@ -86,32 +88,23 @@ class PortfolioApp {
     }, 30000);
   }
 
-  closeToast() {
-    const toast = document.getElementById("toast");
-    if (toast) {
-      toast.style.display = "none";
-      localStorage.setItem("message_sent", "false");
-    }
-  }
-
   setupScrollEffects() {
     let ticking = false;
-    
+
     const updateScrollEffects = () => {
-      // Update up icon visibility
       const upIcon = document.getElementById('UpIcon');
       if (upIcon) {
         upIcon.style.display = window.pageYOffset > 0 ? 'block' : 'none';
       }
 
-      // Update navbar background
       const navbar = document.querySelector('.navbar');
       if (navbar) {
-        if (window.pageYOffset > 50) {
-          navbar.style.background = 'rgba(30, 30, 30, 0.6)';
-          navbar.style.backdropFilter = 'blur(20px)';
+        if (window.pageYOffset > 80) {
+          navbar.style.background = 'rgba(10, 15, 30, 0.92)';
+          navbar.style.borderBottom = '1px solid rgba(129, 140, 248, 0.2)';
         } else {
-          navbar.style.background = 'rgba(30, 30, 30, 0.6)';
+          navbar.style.background = 'rgba(10, 15, 30, 0.75)';
+          navbar.style.borderBottom = '1px solid rgba(129, 140, 248, 0.08)';
         }
       }
 
@@ -124,6 +117,59 @@ class PortfolioApp {
         ticking = true;
       }
     });
+  }
+
+  setupTypedEffect() {
+    const el = document.getElementById('typed-text');
+    if (!el) return;
+
+    const strings = [
+      'Full Stack Developer',
+      'React & Python Engineer',
+      'Problem Solver'
+    ];
+
+    let stringIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+    let pauseFrames = 0;
+
+    const PAUSE_AFTER_TYPE   = 55;
+    const PAUSE_AFTER_DELETE = 12;
+    const TYPE_SPEED_MS      = 65;
+    const DELETE_SPEED_MS    = 35;
+
+    const tick = () => {
+      const current = strings[stringIndex];
+
+      if (pauseFrames > 0) {
+        pauseFrames--;
+        setTimeout(tick, 60);
+        return;
+      }
+
+      if (!isDeleting) {
+        el.textContent = current.slice(0, charIndex + 1);
+        charIndex++;
+        if (charIndex === current.length) {
+          isDeleting = true;
+          pauseFrames = PAUSE_AFTER_TYPE;
+        }
+        setTimeout(tick, TYPE_SPEED_MS);
+      } else {
+        el.textContent = current.slice(0, charIndex - 1);
+        charIndex--;
+        if (charIndex === 0) {
+          isDeleting = false;
+          stringIndex = (stringIndex + 1) % strings.length;
+          pauseFrames = PAUSE_AFTER_DELETE;
+        }
+        setTimeout(tick, DELETE_SPEED_MS);
+      }
+    };
+
+    // Initial delay so page load doesn't feel rushed
+    setTimeout(tick, 800);
   }
 
   // Utility methods
@@ -159,25 +205,24 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function scrollToTop() {
-  window.scrollTo({
-    top: 0,
-    behavior: 'smooth'
-  });
+  window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
 function scrollToPortfolio() {
   const offSetPortfolio = document.getElementById('portfolio').offsetTop - document.getElementById('about').offsetTop;
-  window.scrollTo({
-    top: offSetPortfolio,
-    behavior: 'smooth'
-  });
+  window.scrollTo({ top: offSetPortfolio, behavior: 'smooth' });
 }
 
 function scrollToBottom() {
-  window.scrollTo({
-    top: document.body.scrollHeight,
-    behavior: 'smooth'
-  });
+  document.getElementById('contact').scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+function collapseNav() {
+  const menu = document.getElementById('navMenu');
+  if (menu && menu.classList.contains('show')) {
+    const bsCollapse = bootstrap.Collapse.getInstance(menu);
+    if (bsCollapse) bsCollapse.hide();
+  }
 }
 
 function closeToast() {
@@ -188,14 +233,10 @@ function closeToast() {
   }
 }
 
-// Up Icon
+// Up Icon visibility
 const upIcon = document.getElementById('UpIcon');
-
 addEventListener("scroll", () => {
-    if (window.pageYOffset > 0) {
-        upIcon.style.display = 'block';
-    }
-    else {
-        upIcon.style.display = 'none';
-    }
+  if (upIcon) {
+    upIcon.style.display = window.pageYOffset > 0 ? 'block' : 'none';
+  }
 });
