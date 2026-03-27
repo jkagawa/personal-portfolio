@@ -232,17 +232,6 @@ p {
   }
 }
 
-/* Up icon */
-#UpIcon {
-  display: none;
-}
-
-@media (max-width: 991px) {
-  .navbar {
-    min-height: 3.5rem;
-  }
-}
-
 /* ============================================================
    Toast Notification
    ============================================================ */
@@ -947,6 +936,10 @@ footer .text-muted {
   display: none;
 }
 
+#mobile-nav-container {
+  min-height: 3.5rem;
+}
+
 .mt-6 { margin-top: 4rem; }
 .mb-6 { margin-bottom: 4rem; }
 .w-80  { width: 80%; }
@@ -983,4 +976,17 @@ textarea:focus {
 /* Larger screen */
 @media only screen and (min-width: 992px) {
   .nav-item { text-align: left; }
+}
+
+/* Small screen */
+@media only screen and (max-width: 991px) {
+  #UpIcon { 
+    display: none !important; 
+  }
+  .navbar {
+    min-height: 3.5rem;
+  }
+  #about {
+      margin-top: 3.5rem;
+  }
 }
