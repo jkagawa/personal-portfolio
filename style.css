@@ -390,7 +390,7 @@ section:first-of-type {
 
 /* Hero subtitle */
 #hero-heading2 {
-  font-size: clamp(1rem, 2.5vw, 1.4rem);
+  font-size: clamp(1.2rem, 2.5vw, 1.4rem) !important;
   font-weight: 400;
   color: var(--text-secondary) !important;
   -webkit-text-fill-color: var(--text-secondary);
