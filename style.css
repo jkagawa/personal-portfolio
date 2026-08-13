@@ -433,6 +433,19 @@ section:first-of-type {
   border-radius: 50%;
   overflow: hidden;
   background: var(--bg-surface);
+  position: relative;
+  isolation: isolate;
+}
+
+/* Cool accent grade over the photo */
+.profile-image-inner::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--accent-gradient);
+  mix-blend-mode: color;
+  opacity: 0.45;
+  pointer-events: none;
 }
 
 .profile-image {
@@ -440,8 +453,8 @@ section:first-of-type {
   height: 190px;
   object-fit: cover;
   display: block;
-  margin: 0 0 0 -16px;
-  filter: brightness(1.05) contrast(1.05);
+  margin: -16px 0 0 -16px;
+  filter: saturate(0.55) contrast(1.12) brightness(1.05);
 }
 
 /* Hero section typography override */
