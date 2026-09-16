@@ -454,7 +454,7 @@ section:first-of-type {
   object-fit: cover;
   display: block;
   margin: -16px 0 0 -16px;
-  /* filter: saturate(0.55) contrast(1.12) brightness(1.05); */
+  filter: saturate(0.55) contrast(1.12) brightness(1.05);
 }
 
 /* Hero section typography override */
