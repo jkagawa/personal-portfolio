@@ -130,6 +130,18 @@ class PortfolioApp {
       'Problem Solver'
     ];
 
+    // Respect reduced-motion: show the primary role statically, skip the typing
+    const prefersReducedMotion =
+      window.matchMedia &&
+      window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    if (prefersReducedMotion) {
+      el.textContent = strings[0];
+      const cursor = document.querySelector('.typed-cursor');
+      if (cursor) cursor.style.display = 'none';
+      return;
+    }
+
     let stringIndex = 0;
     let charIndex = 0;
     let isDeleting = false;
@@ -170,7 +182,7 @@ class PortfolioApp {
     };
 
     // Initial delay so page load doesn't feel rushed
-    setTimeout(tick, 800);
+    setTimeout(tick, 400);
   }
 
   // Utility methods
@@ -210,8 +222,11 @@ function scrollToTop() {
 }
 
 function scrollToPortfolio() {
-  const offSetPortfolio = document.getElementById('portfolio').offsetTop - document.getElementById('about').offsetTop;
-  window.scrollTo({ top: offSetPortfolio, behavior: 'smooth' });
+  const portfolio = document.getElementById('portfolio');
+  if (!portfolio) return;
+  const navbar = document.querySelector('.navbar');
+  const offset = navbar ? navbar.offsetHeight : 0;
+  window.scrollTo({ top: portfolio.offsetTop - offset, behavior: 'smooth' });
 }
 
 function scrollToBottom() {

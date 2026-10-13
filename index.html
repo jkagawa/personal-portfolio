@@ -83,27 +83,83 @@
     </div>
 
     <!-- Hero Section -->
-    <section id="about" class="text-left w-100 p-3 d-flex" aria-labelledby="hero-heading">
-        <div class="banner-container d-flex justify-content-center align-items-center m-0 flex-column-reverse flex-lg-row w-100">
-            <div class="d-flex justify-content-center align-items-center flex-column flex-lg-row">
-                <div class="banner-text-container">
-                    <div class="d-flex align-items-start align-items-md-center flex-column flex-md-row m-auto profile-header-container my-4 mx-3">
-                        <div>
-                            <h1 id="hero-heading" class="mb-1">Joshua Kagawa</h1>
-                            <p id="hero-heading2" class="lh-1 mb-0">
-                                <span id="typed-text"></span><span class="typed-cursor" aria-hidden="true"></span>
-                            </p>
+    <section id="about" class="w-100" aria-labelledby="hero-heading">
+        <div class="hero-inner">
+            <div class="row align-items-center gy-4 gx-lg-5">
+
+                <!-- Left: copy + CTAs -->
+                <div class="col-12 col-lg-7 order-2 order-lg-1 hero-copy text-center text-lg-start">
+
+                    <h1 id="hero-heading" class="mb-1 hero-reveal" style="--hero-delay: 0ms;">Joshua Kagawa</h1>
+
+                    <p id="hero-heading2" class="hero-typed-line mb-3 hero-reveal" style="--hero-delay: 80ms;">
+                        <span class="visually-hidden">Full Stack Developer</span>
+                        <span class="hero-typed-wrap" aria-hidden="true">
+                            <span id="typed-text"></span><span class="typed-cursor"></span>
+                        </span>
+                    </p>
+
+                    <p class="hero-lede mb-3 hero-reveal" style="--hero-delay: 160ms;">
+                        I build and ship production web applications end to end, from architecture
+                        and API design through deployment. I work in JavaScript, Python, React, and
+                        Flask, and I care about code that stays clean, reliable, and easy to scale.
+                    </p>
+
+                    <!-- Scannable credentials -->
+                    <p class="hero-meta mb-4 hero-reveal" style="--hero-delay: 240ms;">
+                        <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+                        <!-- PLACEHOLDER: your city/state + remote preference -->
+                        <span>New York City</span>
+                        <span class="hero-meta-sep" aria-hidden="true">&middot;</span>
+                        <span>JavaScript &middot; Python &middot; React &middot; Flask</span>
+                    </p>
+
+                    <!-- CTA row -->
+                    <div class="hero-cta d-flex flex-wrap justify-content-center justify-content-lg-start align-items-center hero-reveal" style="--hero-delay: 320ms;">
+
+                        <button type="button" class="btn-dark" onclick="scrollToPortfolio()">
+                            View My Work <i class="fa-solid fa-arrow-right fa-sm" aria-hidden="true"></i>
+                        </button>
+
+                        <button type="button" class="button-style-light" onclick="scrollToBottom()">
+                            <i class="fa-regular fa-paper-plane" aria-hidden="true"></i> Get In Touch
+                        </button>
+
+                        <a href="static/documents/Joshua_Kagawa_Resume.pdf" target="_blank" rel="noopener noreferrer" class="button-link">
+                            <button type="button" class="button-style-light">
+                                <i class="fa-solid fa-file-arrow-down" aria-hidden="true"></i> Résumé
+                            </button>
+                        </a>
+
+                        <span class="hero-social d-inline-flex align-items-center gap-2">
+                            <a href="https://github.com/jkagawa" class="social-links" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile (opens in a new tab)">
+                                <i class="fa-brands fa-github" aria-hidden="true"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/joshuakagawa" class="social-links" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile (opens in a new tab)">
+                                <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+                            </a>
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Right: portrait -->
+                <div class="col-12 col-lg-5 order-1 order-lg-2 d-flex justify-content-center hero-reveal" style="--hero-delay: 120ms;">
+                    <div class="hero-portrait">
+                        <div class="hero-portrait-inner">
+                            <img src="static/images/profile_photo_3.JPG"
+                                 alt="Portrait of Joshua Kagawa, full stack developer"
+                                 class="hero-portrait-img" width="800" height="800" draggable="false">
                         </div>
                     </div>
-                    <div class="profile-text-container my-4 mx-3 fs-6">
-                        <p>I'm a full stack developer with end-to-end ownership of production web applications. From architecture and API design to deployment. I build with JavaScript, Python, React, and Flask, with a consistent focus on writing code that's clean, reliable, and scalable.</p>
-                    </div>
                 </div>
-                <div class="profile-image-containter">
-                    <div class="profile-image-inner">
-                        <img src="static/images/profile_photo_3.JPG" alt="Joshua Kagawa - Full Stack Developer" class="profile-image" draggable="false">
-                    </div>
-                </div>
+            </div>
+
+            <!-- Scroll cue -->
+            <div class="hero-cue-wrap d-none d-md-flex justify-content-center hero-reveal" style="--hero-delay: 460ms;">
+                <button type="button" class="hero-scroll-cue" onclick="scrollToPortfolio()" aria-label="Scroll to featured projects">
+                    <span>Featured work</span>
+                    <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+                </button>
             </div>
         </div>
     </section>
